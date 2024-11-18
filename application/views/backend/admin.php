@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -15,13 +15,13 @@
     <?php $this->load->view('backend/include/base_nav'); ?>
     <!-- Begin Page Content -->
     <div class="container-fluid">
-      <h1 class="h5 mb-2 text-gray-800">List of System Administrators</h1>
+      <h1 class="h5 mb-2 text-gray-800">Danh Sách Quản Trị Viên Hệ Thống</h1>
       <!-- DataTales Example -->
-      <!-- Log on to codeastro.com for more projects -->
+      <!-- Đăng nhập tại codeastro.com để tìm thêm dự án -->
       <div class="card shadow mb-4">
         <div class="card-header py-3">
            <a href="<?= base_url('backend/admin/daftar') ?>" class="btn btn-success pull-right" >
-           Add Access Account
+           Thêm Tài Khoản Quản Trị
           </a>
         </div>
         <div class="card-body">
@@ -30,12 +30,12 @@
             <thead class="thead-dark">
                 <tr>
                   <th>#</th>
-                  <th>Admin Code</th>
-                  <th>Name</th>
-                  <th>Username</th>
+                  <th>Mã Quản Trị</th>
+                  <th>Họ Tên</th>
+                  <th>Tên Đăng Nhập</th>
                   <th>Email</th>
-                  <th>Level</th>
-                  <!-- <th>Action</th> -->
+                  <th>Phân Quyền</th>
+                  <!-- <th>Hành Động</th> -->
                 </tr>
               </thead>
               <tbody>
@@ -47,12 +47,12 @@
                     <td><?= $row['username_admin']; ?></td>
                     <td><?= $row['email_admin']; ?></td>
                     <td><?php if ($row['level_admin'] == '1') { ?>
-                      OWNER
+                      CHỦ SỞ HỮU
                     <?php }else{ ?>
-                      ADMIN
+                      QUẢN TRỊ VIÊN
                     <?php } ?>
                     </td>
-                    <!-- <td><a href="<?= base_url('backend/home/viewadmin/'.$row['kd_admin']) ?>" class="btn btn btn-info">View</a></td> -->
+                    <!-- <td><a href="<?= base_url('backend/home/viewadmin/'.$row['kd_admin']) ?>" class="btn btn btn-info">Xem Chi Tiết</a></td> -->
                   </tr>
                 <?php } ?>
             </tbody>
@@ -72,7 +72,7 @@
 <!-- End of Content Wrapper -->
 </div>
 <!-- End of Page Wrapper -->
-<!-- Log on to codeastro.com for more projects -->
+<!-- Đăng nhập tại codeastro.com để tìm thêm dự án -->
 <!-- Scroll to Top Button-->
 <a class="scroll-to-top rounded" href="#page-top">
 <i class="fas fa-angle-up"></i>

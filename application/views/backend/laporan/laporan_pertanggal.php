@@ -1,6 +1,6 @@
-<html lang="en" moznomarginboxes mozdisallowselectionprint>
-<head><!-- Log on to codeastro.com for more projects -->
-    <title>Ticket Sales Report</title>
+<html lang="vi" moznomarginboxes mozdisallowselectionprint>
+<head><!-- Đăng nhập tại codeastro.com để tìm thêm dự án -->
+    <title>Báo Cáo Doanh Thu Bán Vé</title>
     <meta charset="utf-8">
     <link rel="stylesheet" href="<?php echo base_url('assets/css/laporan.css')?>"/>
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet">
@@ -19,9 +19,8 @@
 
 <table border="0" align="center" style="width:800px; border:none;margin-top:5px;margin-bottom:0px;">
 <tr>
-    <td colspan="2" style="width:800px;paddin-left:20px;"><center><h4>TICKET SALE REPORT</h4></center><br/></td>
+    <td colspan="2" style="width:800px;paddin-left:20px;"><center><h4>BÁO CÁO DOANH THU BÁN VÉ</h4></center><br/></td>
 </tr>
-                       
 </table>
  
 <table border="0" align="center" style="width:900px;border:none;">
@@ -32,15 +31,15 @@
 <table border="1" align="center" class="table table-bordered table-striped" style="width:900px;margin-bottom:20px;">
 <thead>
 <tr>
-<th colspan="11" style="text-align:left;">Report From Date: <?php echo $mulai ?> to <?php echo $sampai ?> </th>
+<th colspan="11" style="text-align:left;">Báo cáo từ ngày: <?php echo $mulai ?> đến <?php echo $sampai ?> </th>
 </tr>
     <tr>
-        <th>Ticket Number</th>
-        <th>Order</th>
-        <th>Customer </th>
-        <th>Age</th>
-        <th>Seat</th>
-        <th>Price</th>
+        <th>Mã Vé</th>
+        <th>Đơn Hàng</th>
+        <th>Khách Hàng</th>
+        <th>Tuổi</th>
+        <th>Số Ghế</th>
+        <th>Giá Vé</th>
     </tr>
 </thead>
 <tbody>
@@ -51,15 +50,14 @@
         <td style="text-align:center;"><?php echo $row['nama_tiket'];?></td>
         <td style="text-align:center;"><?php echo $row['umur_tiket'];?></td>
         <td style="text-align:center;"><?php echo $row['kursi_tiket'];?></td>
-        <td style="text-align:left;"><?php echo '$'.number_format($row['harga_tiket']);?></td>
+        <td style="text-align:left;"><?php echo number_format($row['harga_tiket']).' đ';?></td>
     </tr>
     <?php } ?>
 </tbody>
 <tfoot>
-
     <tr>
-        <td colspan="5" style="text-align:right;"><b>Total: </b></td>
-        <td style="text-align:left;"><b><?php echo '$'.number_format($total);?></b></td>
+        <td colspan="5" style="text-align:right;"><b>Tổng Cộng: </b></td>
+        <td style="text-align:left;"><b><?php echo number_format($total).' đ';?></b></td>
     </tr>
 </tfoot>
 </table>
@@ -74,7 +72,6 @@
     <tr>
         <td align="right"></td>
     </tr>
-   
     <tr>
     <td><br/><br/></td>
     </tr>    

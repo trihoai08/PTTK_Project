@@ -127,33 +127,26 @@
 </head>
 
 <body id="page-top">
-	<!-- navbar -->
+	<!-- Navbar -->
 	<?php $this->load->view('backend/include/base_nav'); ?>
-	<!-- Begin Page Content -->
+	<!-- Nội dung -->
 	<div class="container-fluid">
-		<!-- Page Heading -->
-		<!-- Log on to codeastro.com for more projects -->
-		<!-- Basic Card Example -->
 		<div class="card shadow mb-4">
 			<div class="card-header py-3">
-				<h6 class="m-0 font-weight-bold text-primary">Bank code [<?= $bank['kd_bank']; ?>] </h6>
+				<h6 class="m-0 font-weight-bold text-primary">Thông tin ngân hàng [<?= $bank['kd_bank']; ?>]</h6>
 			</div>
 			<div class="card-body">
 				<div class="card-body">
 					<div class="row">
 						<div class="col-sm-6">
-							<p>Bank Name : <b> <?= $bank['nama_bank']?></b></p>
-							<p>Customer Name: <b><?= strtoupper($bank['nasabah_bank']) ?></b></p>
-							<p>Account number : <b><?= $bank['nomrek_bank']; ?></b></p>
-							<p>Bank Logo : <img id="myImg" src="<?= base_url($bank['photo_bank']) ?>" alt="<?= $bank['nama_bank'] ?>"
-									style="width:100%;max-width:300px"></p>
-						</div>
-						<div class="col-sm-6">
+							<p>Tên ngân hàng: <b><?= $bank['nama_bank']?></b></p>
+							<p>Chủ tài khoản: <b><?= strtoupper($bank['nasabah_bank']) ?></b></p>
+							<p>Số tài khoản: <b><?= $bank['nomrek_bank']; ?></b></p>
+							<p>Logo ngân hàng: <img id="myImg" src="<?= base_url($bank['photo_bank']) ?>" alt="<?= $bank['nama_bank'] ?>" style="width:100%;max-width:300px"></p>
 						</div>
 					</div>
 					<hr>
-					<a class="btn btn-danger" href="<?= base_url('backend/bank')?>"> Go Back</a>
-					<!-- <button data-toggle="modal" data-target="#edit" class="btn btn-info float-right">Edit</button> -->
+					<a class="btn btn-danger" href="<?= base_url('backend/bank')?>">Quay lại</a>
 				</div>
 			</div>
 		</div>

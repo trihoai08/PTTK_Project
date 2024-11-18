@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -15,51 +15,42 @@
         <?php $this->load->view('backend/include/base_nav'); ?>
         <!-- Begin Page Content -->
         <div class="container-fluid">
-            <!-- Page Heading -->
-            <!-- Log on to codeastro.com for more projects -->
-            <h1 class="h5 mb-4 text-gray-800">Report Section</h1>
-            <table class="table table-bordered table-condensed"  id="mydata">
-            <thead class="thead-dark">
+            <!-- Tiêu đề Trang -->
+            <h1 class="h5 mb-4 text-gray-800">Phần Báo Cáo</h1>
+            <table class="table table-bordered table-condensed" id="mydata">
+                <thead class="thead-dark">
                     <tr>
                         <th style="text-align:center;width:40px;">#</th>
-                        <th>Report</th>
-                        <th style="width:100px;text-align:center;">Action</th>
+                        <th>Tên Báo Cáo</th>
+                        <th style="width:100px;text-align:center;">Hành Động</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td style="text-align:center;vertical-align:middle">1</td>
-                        <td style="vertical-align:middle;">Ticket Sales Report</td>
+                        <td style="vertical-align:middle;">Báo Cáo Doanh Thu Vé</td>
                         <td style="text-align:center;">
-                            <a class="btn btn-sm btn-success" href="#lap_jual_pertanggal" data-toggle="modal"><span class="fa fa-print"></span> Print</a>
+                            <a class="btn btn-sm btn-success" href="#lap_jual_pertanggal" data-toggle="modal"><span class="fa fa-print"></span> In</a>
                         </td>
                     </tr>
-                    <!-- <tr>
-                        <td style="text-align:center;vertical-align:middle">2</td>
-                        <td style="vertical-align:middle;">Monthly Ticket Data Report</td>
-                        <td style="text-align:center;">
-                            <a class="btn btn-sm btn-success" href="#lap_jual_perbulan" data-toggle="modal"><span class="fa fa-print"></span> Print</a>
-                        </td>
-                    </tr> -->
                 </tbody>
             </table>
         </div>
     </div>
-    <!-- /.row -->
-    <!-- ============ MODAL ADD =============== -->
+    <!-- ============ MODAL =============== -->
     <div class="modal fade" id="lap_jual_pertanggal" tabindex="-1" role="dialog" aria-labelledby="largeModal" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h3 class="modal-title" id="myModalLabel">Select Date</h3>
+                    <h3 class="modal-title" id="myModalLabel">Chọn Ngày</h3>
                 </div>
                 <form class="form-horizontal" method="post" action="<?= base_url('backend/laporan/laportanggal') ?>" target="_blank">
                     <div class="modal-body">
                         <div class="form-group">
-                            <label class="control-label col-xs-3" > From Date</label>
+                            <label class="control-label col-xs-3"> Từ Ngày</label>
                             <div class="col-xs-9">
                                 <div class='input-group date' id='datepicker' style="width:300px;">
-                                    <input type='text' name="mulai" class="form-control datepicker" value="" placeholder="Date..." required/>
+                                    <input type='text' name="mulai" class="form-control datepicker" value="" placeholder="Ngày..." required/>
                                     <span class="input-group-addon">
                                         <span class="glyphicon glyphicon-calendar"></span>
                                     </span>
@@ -67,10 +58,10 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="control-label col-xs-3" > Till Date</label>
+                            <label class="control-label col-xs-3"> Đến Ngày</label>
                             <div class="col-xs-9">
                                 <div class='input-group date' id='datepicker' style="width:300px;">
-                                    <input type='text' name="sampai" class="form-control datepicker" value="" placeholder="Date..." required/>
+                                    <input type='text' name="sampai" class="form-control datepicker" value="" placeholder="Ngày..." required/>
                                     <span class="input-group-addon">
                                         <span class="glyphicon glyphicon-calendar"></span>
                                     </span>
@@ -79,8 +70,8 @@
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <button class="btn btn-danger" data-dismiss="modal" aria-hidden="true">Close</button>
-                        <button class="btn btn-success"><span class="fa fa-print"></span> Print</button>
+                        <button class="btn btn-danger" data-dismiss="modal" aria-hidden="true">Đóng</button>
+                        <button class="btn btn-success"><span class="fa fa-print"></span> In</button>
                     </div>
                 </form>
             </div>
@@ -133,15 +124,15 @@
 <!-- js -->
 <?php $this->load->view('backend/include/base_js'); ?>
 <script type="text/javascript">
-             $(function(){
-                var date = new Date();
-                date.setDate(date.getDate());
+    $(function(){
+        var date = new Date();
+        date.setDate(date.getDate());
 
-              $(".datepicker").datepicker({
-                  format: 'yyyy-mm-dd',
-                  autoclose: true,
-              });
-             });
-            </script>
+        $(".datepicker").datepicker({
+            format: 'yyyy-mm-dd',
+            autoclose: true,
+        });
+    });
+</script>
 </body>
 </html>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -15,11 +15,10 @@
     <?php $this->load->view('backend/include/base_nav'); ?>
     <!-- Begin Page Content -->
     <div class="container-fluid">
-      <!-- Log on to codeastro.com for more projects -->
-      <!-- DataTales Example -->
+      <!-- Danh sách thanh toán -->
       <div class="card shadow mb-4">
         <div class="card-header py-3">
-        <h1 class="h5 text-gray-800">Payments List</h1>
+        <h1 class="h5 text-gray-800">Danh Sách Thanh Toán</h1>
         </div>
         <div class="card-body">
           <div class="table-responsive">
@@ -27,13 +26,13 @@
             <thead class="thead-dark">
                 <tr>
                   <th>#</th>
-                  <th>Code</th>
-                  <th>Booking Code</th>
-                  <th>Sender </th>
-                  <th>Bank </th>
-                  <th>Account No.</th>
-                  <th>Price</th>
-                  <th>TF proof</th>
+                  <th>Mã</th>
+                  <th>Mã Đặt Vé</th>
+                  <th>Người Gửi</th>
+                  <th>Ngân Hàng</th>
+                  <th>Số Tài Khoản</th>
+                  <th>Số Tiền</th>
+                  <th>Bằng Chứng Chuyển Khoản</th>
                 </tr>
               </thead>
               <tbody>
@@ -45,8 +44,8 @@
                     <td><?= $row['nama_konfirmasi']; ?></td>
                     <td><?= $row['nama_bank_konfirmasi']; ?></td>
                     <td><?= $row['norek_konfirmasi']; ?></td>
-                    <td>$<?= $row['total_konfirmasi']; ?></td>
-                    <td><a href="<?= base_url('backend/konfirmasi/viewkonfirmasi/'.$row['kd_order']) ?>" class="btn btn btn-info">View</a></td>
+                    <td><?= number_format($row['total_konfirmasi'], 0, ',', '.'); ?> VNĐ</td>
+                    <td><a href="<?= base_url('backend/konfirmasi/viewkonfirmasi/'.$row['kd_order']) ?>" class="btn btn btn-info">Xem</a></td>
                   </tr>
                 <?php } ?>
             </tbody>
@@ -58,15 +57,15 @@
   </div>
   <!-- /.container-fluid -->
 </div>
-<!-- End of Main Content -->
+<!-- Kết thúc nội dung chính -->
 <!-- Footer -->
 <?php $this->load->view('backend/include/base_footer'); ?>
-<!-- End of Footer -->
+<!-- Kết thúc Footer -->
 </div>
-<!-- End of Content Wrapper -->
-</div><!-- Log on to codeastro.com for more projects -->
-<!-- End of Page Wrapper -->
-<!-- Scroll to Top Button-->
+<!-- Kết thúc Content Wrapper -->
+</div>
+<!-- Kết thúc Page Wrapper -->
+<!-- Nút cuộn lên -->
 <a class="scroll-to-top rounded" href="#page-top">
 <i class="fas fa-angle-up"></i>
 </a>

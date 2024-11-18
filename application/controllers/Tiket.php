@@ -1,89 +1,107 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
+<?php
+defined('BASEPATH') OR exit('No direct script access allowed');
+
 class Tiket extends CI_Controller {
 	public function __construct(){
 		parent::__construct();
 		$this->load->helper('tglindo_helper');
 		$this->load->model('getkod_model');
-		date_default_timezone_set("Asia/Jakarta");
+		date_default_timezone_set("Asia/Ho_Chi_Minh"); // Đặt múi giờ Việt Nam
 	}
+
+	// Kiểm tra bảo mật đăng nhập
 	function getsecurity($value=''){
 		$username = $this->session->userdata('username');
 		if (empty($username)) {
 			redirect('login');
 		}
 	}
+
+	// Trang chính để kiểm tra lịch trình
 	public function index(){
-		$this->session->unset_userdata(array('jadwal','asal','tanggal'));
-		$data['title'] = "Check Schedule";
-		$data['asal'] = $this->db->query("SELECT * FROM `tbl_tujuan` ORDER BY kota_tujuan ASC ")->result_array();
-		$data['tujuan'] = $this->db->query("SELECT * FROM `tbl_tujuan` group by kota_tujuan ORDER BY kota_tujuan ASC ")->result_array();
-		$data['list'] = $this->db->query("SELECT * FROM `tbl_tujuan` ORDER BY kota_tujuan ASC ")->result_array();
-		$this->load->view('frontend/cektanggal',$data);
+		$this->session->unset_userdata(array('jadwal', 'asal', 'tanggal'));
+		$data['title'] = "Kiểm tra lịch trình";
+		$data['asal'] = $this->db->query("SELECT * FROM `tbl_tujuan` ORDER BY kota_tujuan ASC")->result_array();
+		$data['tujuan'] = $this->db->query("SELECT * FROM `tbl_tujuan` GROUP BY kota_tujuan ORDER BY kota_tujuan ASC")->result_array();
+		$data['list'] = $this->db->query("SELECT * FROM `tbl_tujuan` ORDER BY kota_tujuan ASC")->result_array();
+		$this->load->view('frontend/cektanggal', $data);
 	}
-	/* Log on to codeastro.com for more projects */
+
+	// Kiểm tra vé
 	public function cektiket($value=''){
 		$this->load->view('frontend/cektiket');
 	}
-	public function cekjadwal($tgl='' , $asl='', $tjn=''){
-		$this->session->unset_userdata(array('jadwal','asal','tanggal'));
-		$data['title'] = 'Search Tickets';
-		$data['tanggal'] = $this->input->get('tanggal').$tgl;
-		$asal = $this->input->get('asal').$asl;
-		$tujuan = $this->input->get('tujuan').$tjn;
-		$data['asal'] = $this->db->query("SELECT * FROM tbl_tujuan
-               WHERE kd_tujuan ='$asal'")->row_array();
-		$data['jadwal'] = $this->db->query("SELECT * FROM tbl_jadwal LEFT JOIN tbl_bus on tbl_jadwal.kd_bus = tbl_bus.kd_bus LEFT JOIN tbl_tujuan on tbl_jadwal.kd_tujuan = tbl_tujuan.kd_tujuan WHERE tbl_jadwal.wilayah_jadwal ='$tujuan' AND tbl_jadwal.kd_asal = '$asal'")->result_array();
+
+	// Kiểm tra lịch trình cụ thể
+	public function cekjadwal($tgl='', $asl='', $tjn=''){
+		$this->session->unset_userdata(array('jadwal', 'asal', 'tanggal'));
+		$data['title'] = 'Tìm vé';
+		$data['tanggal'] = $this->input->get('tanggal') . $tgl;
+		$asal = $this->input->get('asal') . $asl;
+		$tujuan = $this->input->get('tujuan') . $tjn;
+
+		$data['asal'] = $this->db->query("SELECT * FROM tbl_tujuan WHERE kd_tujuan = '$asal'")->row_array();
+		$data['jadwal'] = $this->db->query("SELECT * FROM tbl_jadwal 
+			LEFT JOIN tbl_bus ON tbl_jadwal.kd_bus = tbl_bus.kd_bus 
+			LEFT JOIN tbl_tujuan ON tbl_jadwal.kd_tujuan = tbl_tujuan.kd_tujuan 
+			WHERE tbl_jadwal.wilayah_jadwal = '$tujuan' AND tbl_jadwal.kd_asal = '$asal'")->result_array();
+
 		if (!empty($data['jadwal'])) {
 			if ($tujuan == $data['asal']['kota_tujuan']) {
-				$this->session->set_flashdata('message', 'swal("Cek", "Tujuan dan Asal tidak boleh sama", "error");');
-    			redirect('tiket');
-			}else{
-				for ($i=0; $i < count($data['jadwal']); $i++) { 
-					$data['kursi'][$i] = $this->db->query("SELECT count(no_kursi_order) FROM tbl_order WHERE kd_jadwal = '".$data['jadwal'][$i]['kd_jadwal']."' AND tgl_berangkat_order = '".$data['tanggal']."' AND asal_order = '".$asal."'")->result_array();
-				};
-				$this->load->view('frontend/cekjadwal',$data);
+				$this->session->set_flashdata('message', 'swal("Kiểm tra", "Điểm đến và điểm khởi hành không được trùng nhau", "error");');
+				redirect('tiket');
+			} else {
+				for ($i = 0; $i < count($data['jadwal']); $i++) { 
+					$data['kursi'][$i] = $this->db->query("SELECT COUNT(no_kursi_order) FROM tbl_order WHERE kd_jadwal = '".$data['jadwal'][$i]['kd_jadwal']."' AND tgl_berangkat_order = '".$data['tanggal']."' AND asal_order = '".$asal."'")->result_array();
+				}
+				$this->load->view('frontend/cekjadwal', $data);
 			}
-		}else{
-			$this->session->set_flashdata('message', 'swal("Empty", "No Schedule", "error");');
-    		redirect('tiket');
+		} else {
+			$this->session->set_flashdata('message', 'swal("Trống", "Không tìm thấy lịch trình", "error");');
+			redirect('tiket');
 		}
 	}
-	/* Log on to codeastro.com for more projects */
-	public function beforebeli($jadwal="",$asal='',$tanggal=''){
+
+	// Trước khi mua vé
+	public function beforebeli($jadwal="", $asal='', $tanggal=''){
 		$array = array(
 			'jadwal' => $jadwal,
-			'asal'	=> $asal,
-			'tanggal'	=> $tanggal
+			'asal' => $asal,
+			'tanggal' => $tanggal
 		);
 		$this->session->set_userdata($array);
 		if ($this->session->userdata('username')){
-			$id = $jadwal;
-			$asal = $asal;
 			$data['tanggal'] = $tanggal;
-			$data['asal'] =  $this->db->query("SELECT * FROM tbl_tujuan
-               WHERE kd_tujuan ='".$asal."'")->row_array();
-			$data['jadwal'] = $this->db->query("SELECT * FROM tbl_jadwal LEFT JOIN tbl_bus on tbl_jadwal.kd_bus = tbl_bus.kd_bus LEFT JOIN tbl_tujuan on tbl_jadwal.kd_tujuan = tbl_tujuan.kd_tujuan WHERE kd_jadwal ='".$id."'")->row_array();
+			$data['asal'] = $this->db->query("SELECT * FROM tbl_tujuan WHERE kd_tujuan ='".$asal."'")->row_array();
+			$data['jadwal'] = $this->db->query("SELECT * FROM tbl_jadwal 
+				LEFT JOIN tbl_bus ON tbl_jadwal.kd_bus = tbl_bus.kd_bus 
+				LEFT JOIN tbl_tujuan ON tbl_jadwal.kd_tujuan = tbl_tujuan.kd_tujuan 
+				WHERE kd_jadwal ='".$jadwal."'")->row_array();
 			$data['kursi'] = $this->db->query("SELECT no_kursi_order FROM tbl_order WHERE kd_jadwal = '".$data['jadwal']['kd_jadwal']."' AND tgl_berangkat_order = '".$data['tanggal']."' AND asal_order = '".$asal."'")->result_array();
-			$this->load->view('frontend/beli_step1',$data);
-		}else{ 
+			$this->load->view('frontend/beli_step1', $data);
+		} else { 
 			redirect('login/autlogin');
 		}
 	}
+
+	// Sau khi mua vé
 	public function afterbeli(){
 		$data['kursi'] = $this->input->get('kursi');
-		$data['bank'] = $this->db->query("SELECT * FROM `tbl_bank` ")->result_array();
+		$data['bank'] = $this->db->query("SELECT * FROM `tbl_bank`")->result_array();
 		$data['kd_jadwal'] = $this->session->userdata('jadwal');
 		$data['asal'] = $this->session->userdata('asal');
 		$data['tglberangkat'] = $this->input->get('tgl');
 		if ($data['kursi']) {
 			$this->load->view('frontend/beli_step2', $data);
-		}else{
-			$this->session->set_flashdata('message', 'swal("Empty", "Choose Your Seat", "error");');
+		} else {
+			$this->session->set_flashdata('message', 'swal("Trống", "Vui lòng chọn chỗ ngồi của bạn", "error");');
 			redirect('tiket/beforebeli/'.$data['asal'].'/'.$data['kd_jadwal']);
 		}
 	}
+
 	/* Log on to codeastro.com for more projects */
 	public function gettiket($value=''){
 	    include 'assets/phpqrcode/qrlib.php';

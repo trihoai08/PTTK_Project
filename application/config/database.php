@@ -74,23 +74,24 @@ $active_group = 'default';
 $query_builder = TRUE;
 
 $db['default'] = array(
-	'dsn'	=> '',
-	'hostname' => 'localhost',
-	'username' => 'root',
-	'password' => '',
-	'database' => 'busticketci',
-	'dbdriver' => 'mysqli',
-	'dbprefix' => '',
-	'pconnect' => FALSE,
-	'db_debug' => (ENVIRONMENT !== 'production'),
-	'cache_on' => FALSE,
-	'cachedir' => '',
-	'char_set' => 'utf8',
-	'dbcollat' => 'utf8_general_ci',
-	'swap_pre' => '',
-	'encrypt' => FALSE,
-	'compress' => FALSE,
-	'stricton' => FALSE,
-	'failover' => array(),
-	'save_queries' => TRUE
+    'dsn'      => '',               // Không cần dùng DSN
+    'hostname' => 'localhost',      // Máy chủ MySQL (cục bộ)
+    'username' => 'root',           // Tài khoản MySQL mặc định
+    'password' => '',               // Không đặt mật khẩu trên XAMPP
+    'database' => 'busticketci',    // Tên cơ sở dữ liệu
+    'dbdriver' => 'mysqli',         // Driver MySQL Improved
+    'dbprefix' => '',               // Không cần tiền tố bảng
+    'pconnect' => FALSE,            // Không sử dụng kết nối liên tục
+    'db_debug' => (ENVIRONMENT !== 'production'), // Hiển thị lỗi SQL trong môi trường dev
+    'cache_on' => FALSE,            // Không bật cache cơ sở dữ liệu
+    'cachedir' => '',               // Thư mục cache (nếu dùng)
+    'char_set' => 'utf8',           // Bộ mã ký tự
+    'dbcollat' => 'utf8_general_ci',// Quy tắc so sánh chuỗi
+    'swap_pre' => '',               // Không thay thế tiền tố
+    'encrypt'  => FALSE,            // Không mã hóa kết nối
+    'compress' => FALSE,            // Không nén kết nối
+    'stricton' => FALSE,            // Không bật chế độ strict
+    'failover' => array(),          // Không sử dụng kết nối thay thế
+    'save_queries' => TRUE          // Lưu lại các truy vấn SQL
 );
+

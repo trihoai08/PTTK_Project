@@ -23,7 +23,7 @@ class Login extends CI_Controller {
 		$username = strtolower($this->input->post('username'));
 		$password = $this->input->post('password');
 		$sqlCheck = $this->db->query('select * from tbl_pelanggan where username_pelanggan = "'.$username.'" OR email_pelanggan = "'.$username.'" ')->row();
-		// die(print_r($sqlCheck));
+
 		if ($sqlCheck) {
 			if ($sqlCheck->status_pelanggan == 1) { 
 				if (password_verify($password,$sqlCheck->password_pelanggan)) {
@@ -46,19 +46,19 @@ class Login extends CI_Controller {
 						}
 					}else{
 					$this->session->set_flashdata('pesan', '<div class="alert alert-danger" role="alert">
-					Wrong Password
+					Mật khẩu không chính xác!
 					</div>');
 					redirect('login');
 				}
 			}else{
 				$this->session->set_flashdata('pesan', '<div class="alert alert-danger" role="alert">
-				Account Not verified yet!!
+				Tài khoản chưa được xác minh!
 					</div>');
 				redirect('login');
 			}
 		}else{
 			$this->session->set_flashdata('pesan', '<div class="alert alert-danger" role="alert">
-			Username not found. Please try again!
+			Tên đăng nhập hoặc email không tồn tại. Vui lòng thử lại!
 					</div>');
 			redirect('login');
 		}
@@ -66,31 +66,32 @@ class Login extends CI_Controller {
 
 	public function daftar(){
 		$this->form_validation->set_rules('nomor', 'Nomor', 'trim|required|is_unique[tbl_pelanggan.telpon_pelanggan]',array(
-			'required' => 'Mobile number is required to be filled in.',
-			'is_unique' => 'Number Already In Use.'
+			'required' => 'Số điện thoại là bắt buộc.',
+			'is_unique' => 'Số điện thoại này đã được sử dụng.'
 			 ));
 		$this->form_validation->set_rules('name', 'Name', 'trim|required',array(
-			'required' => 'Name Required.',
+			'required' => 'Tên là bắt buộc.',
 			 ));
-		$this->form_validation->set_rules('alamat', 'Alamat', 'trim|required');
+		$this->form_validation->set_rules('alamat', 'Alamat', 'trim|required', array(
+			'required' => 'Địa chỉ là bắt buộc.',
+		));
 		$this->form_validation->set_rules('username', 'Username', 'trim|required|min_length[5]|is_unique[tbl_pelanggan.username_pelanggan]',array(
-			'required' => 'Username Required.',
-			'is_unique' => 'Username Already In Use.'
+			'required' => 'Tên đăng nhập là bắt buộc.',
+			'is_unique' => 'Tên đăng nhập này đã được sử dụng.'
 			 ));
 		$this->form_validation->set_rules('email', 'Email', 'trim|required|valid_email|is_unique[tbl_pelanggan.email_pelanggan]',array(
-			'required' => 'Email Required.',
-			'valid_email' => 'Enter Email Correctly',
-			'is_unique' => 'Email Already In Use.'
+			'required' => 'Email là bắt buộc.',
+			'valid_email' => 'Vui lòng nhập email hợp lệ.',
+			'is_unique' => 'Email này đã được sử dụng.'
 			 ));
 		$this->form_validation->set_rules('password1', 'Password', 'trim|required|min_length[8]|matches[password2]',array(
-			'matches' => 'Password Not Same.',
-			'min_length' => 'Password Minimum 8 Characters.'
+			'matches' => 'Mật khẩu không khớp.',
+			'min_length' => 'Mật khẩu phải có ít nhất 8 ký tự.'
 			 ));
 		$this->form_validation->set_rules('password2', 'Password', 'trim|required|matches[password1]');
 		if ($this->form_validation->run() == false) {
 			$this->load->view('frontend/daftar');
 		} else {
-			// die(print_r($_POST));
 			$this->load->model('getkod_model');
 			$data = array(
 			'kd_pelanggan'	=> $this->getkod_model->get_kodpel(),
@@ -113,10 +114,9 @@ class Login extends CI_Controller {
 			$this->db->insert('tbl_pelanggan', $data);
 			$this->db->insert('tbl_token_pelanggan', $data1);
 			$this->_sendmail($token,'verify');
-			$this->session->set_flashdata('message', 'swal("Success", "Successfully Registered. Welcome to BTBS!", "success");');
+			$this->session->set_flashdata('message', 'swal("Thành công", "Đăng ký thành công, chào mừng bạn đến với hệ thống!", "success");');
     		redirect('login');
 		}
-
 	}
 	Private function _sendmail($token='',$type=''){
 		$config = [

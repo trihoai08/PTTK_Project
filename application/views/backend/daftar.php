@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 
 <head>
 	<meta charset="utf-8">
@@ -20,11 +20,11 @@
 	<!-- Begin Page Content -->
 	<div class="container-fluid">
 		<!-- Page Heading -->
-		<!-- Log on to codeastro.com for more projects -->
+		<!-- Đăng nhập tại codeastro.com để tìm thêm dự án -->
 		<!-- Basic Card Example -->
 		<div class="card shadow mb-4">
 			<div class="card-header py-3">
-				<h6 class="m-0 font-weight-bold text-primary">Add New Admin</h6>
+				<h6 class="m-0 font-weight-bold text-primary">Thêm Quản Trị Viên Mới</h6>
 			</div>
 			<div class="card-body">
 				<div class="card-body">
@@ -33,39 +33,39 @@
 							<form class="user" method="post" action="<?= base_url('backend/login/daftar') ?>">
 								<div class="form-group">
 									<input type="text" class="form-control form-control-user" id="exampleFirstName" name="name"
-										value="<?= set_value('name') ?>" placeholder="Full Name">
+										value="<?= set_value('name') ?>" placeholder="Họ và Tên">
 									<?= form_error('name'),'<small class="text-danger pl-3">','</small>'; ?>
 								</div>
 								<div class="form-group">
-									<input type="email" class="form-control form-control-user" placeholder="Email Address" name="email"
+									<input type="email" class="form-control form-control-user" placeholder="Địa Chỉ Email" name="email"
 										value="<?= set_value('email') ?>">
 									<?= form_error('email'),'<small class="text-danger pl-3">','</small>'; ?>
 								</div>
 								<div class="form-group">
-									<input type="text" class="form-control form-control-user" placeholder="Username" name="username"
+									<input type="text" class="form-control form-control-user" placeholder="Tên Đăng Nhập" name="username"
 										value="<?= set_value('username') ?>">
 									<?= form_error('username'),'<small class="text-danger pl-3">','</small>'; ?>
 								</div>
 								<div class="form-group row">
 									<div class="col-sm-6 mb-3 mb-sm-0">
 										<input type="password" class="form-control form-control-user" name="password"
-											placeholder="Password">
+											placeholder="Mật Khẩu">
 									</div>
 									<div class="col-sm-6">
 										<input type="password" class="form-control form-control-user" name="password2"
-											placeholder="Repeat Password">
+											placeholder="Nhập Lại Mật Khẩu">
 									</div>
 								</div>
 								<div class="form-group">
 									<select class="form-control" name="level">
-										<option value="2">Adminstartor</option>
-										<option value="1">Owner</option>
+										<option value="2">Quản Trị Viên</option>
+										<option value="1">Chủ Sở Hữu</option>
 									</select>
 								</div>
 								<?= form_error('password'),'<small class="text-danger pl-3">','</small>'; ?>
-								<a href="<?= base_url('backend/admin')?>" class="btn btn-danger">Go Back</a>
+								<a href="<?= base_url('backend/admin')?>" class="btn btn-danger">Quay Lại</a>
 								<button type="submit" class="btn btn-success float-right">
-								Add Account
+								Thêm Tài Khoản
 								</button>
 							</form>
 						</div>
@@ -74,8 +74,7 @@
 			</div>
 		</div>
 		<!-- End of Main Content -->
-		<!-- The Modal -->
-		<!-- Footer --><!-- Log on to codeastro.com for more projects -->
+		<!-- Footer --><!-- Đăng nhập tại codeastro.com để tìm thêm dự án -->
 		<?php $this->load->view('backend/include/base_footer'); ?>
 		<!-- End of Footer -->
 		<!-- js -->
