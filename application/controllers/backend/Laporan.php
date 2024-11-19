@@ -35,10 +35,21 @@ class Laporan extends CI_Controller {
 			AND status_tiket = 2
 		")->result_array();
 
-		// Tính tổng doanh thu
-		for ($i = 0; $i < count($data['laporan']); $i++) { 
-			$total[$i] = $data['laporan'][$i]['harga_tiket'];
+	
+		// Khởi tạo mảng $total
+		$total = [];
+
+		// Kiểm tra nếu có dữ liệu trong $data['laporan']
+		if (!empty($data['laporan'])) {
+			foreach ($data['laporan'] as $laporan) {
+				// Đảm bảo 'harga_tiket' tồn tại và là số
+				if (isset($laporan['harga_tiket']) && is_numeric($laporan['harga_tiket'])) {
+					$total[] = $laporan['harga_tiket'];
+				}
+			}
 		}
+		
+		// Tính tổng doanh thu
 		$data['total'] = array_sum($total);
 
 		// Hiển thị báo cáo
