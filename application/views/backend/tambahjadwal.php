@@ -32,7 +32,7 @@
                     <select class="form-control" name="asal" required>
                       <option value="" selected disabled="">-Chọn Điểm Xuất Phát-</option>
                       <?php foreach ($tujuan as $row ) { ?>
-                      <option value="<?= $row['kd_tujuan'] ?>" ><?= strtoupper($row['kota_tujuan'])." - ".$row['terminal_tujuan']; ?></option>
+                      <option value="<?= $row['kd_tujuan'] ?>" ><?= strtoupper($row['terminal_tujuan']); ?></option>
                       <?php } ?>
                     </select>
                   </div>
@@ -41,7 +41,7 @@
                     <select class="form-control" name="tujuan" required>
                       <option value="" selected disabled="">-Chọn Điểm Đến-</option>
                       <?php foreach ($tujuan as $row ) { ?>
-                      <option value="<?= $row['kd_tujuan'] ?>" ><?= strtoupper($row['kota_tujuan'])." - ".$row['terminal_tujuan']; ?></option>
+                      <option value="<?= $row['kd_tujuan'] ?>" ><?= strtoupper($row['kota_tujuan']); ?></option>
                       <?php } ?>
                     </select>
                   </div>

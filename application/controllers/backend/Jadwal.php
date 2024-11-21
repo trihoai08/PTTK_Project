@@ -44,7 +44,8 @@ class Jadwal extends CI_Controller {
 		if ($this->form_validation->run() ==  FALSE) {
 			$data['title'] = "Thêm Lịch Trình"; // Việt hóa tiêu đề
 			$data['bus'] = $this->db->query("SELECT * FROM tbl_bus ORDER BY nama_bus asc")->result_array();
-			$data['tujuan'] = $this->db->query("SELECT * FROM tbl_tujuan ORDER BY kota_tujuan asc")->result_array();
+			$data['tujuan'] = $this->db->query("SELECT * FROM tbl_tujuan ORDER BY kota_tujuan ASC")->result_array();
+
 			$this->load->view('backend/tambahjadwal', $data);
 		} else {
 			$asal = $this->input->post('asal');

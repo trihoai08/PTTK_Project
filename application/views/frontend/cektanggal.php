@@ -35,24 +35,24 @@
 					<!-- Default Card Example -->
 					<div class="card mb-5">
 						<div class="card-header">
-							<i class="fas fa-search"></i> Search Tickets
+							<i class="fas fa-search"></i> Tìm kiếm vé
 						</div>
 						<div class="card-body">
 							<div class="alert alert-warning" role="alert">
-								<p><b>IMPORTANT!!</b></p>
-								<P>Before Buying Tickets, Please have a look >> <b><i data-toggle="modal"
-											data-target="#exampleModal">How to book?</i></b></P>
+								<p><b>Lưu ý</b></p>
+								<P>Trước khi mua vé, vui lòng xem  <b><i data-toggle="modal"
+											data-target="#exampleModal">Làm thế nào để coi vé ?</i></b></P>
 							</div>
 							<form action="<?php echo base_url() ?>tiket/cekjadwal?>" method="get">
 								<div class="form-group">
 									<label for="exampleInputEmail1">Chọn ngày</label>
-									<input placeholder="Enter date" type="text" class="form-control datepicker"
+									<input placeholder="Chọn ngày" type="text" class="form-control datepicker"
 										name="tanggal" required="">
 								</div>
 								<div class="form-group">
-									<label for="exampleInputEmail1">Origin</label>
+									<label for="exampleInputEmail1">Điểm đi</label>
 									<select name="asal" class="form-control js-example-basic-single" required>
-										<option value="" selected disabled="">Choose Origin</option>
+										<option value="" selected disabled="">Chọn điểm đi</option>
 										<?php foreach ($asal as $row ) { ?>
 										<option value="<?php echo $row['kd_tujuan'] ?>">
 											<?php echo strtoupper($row['kota_tujuan']) ?>
@@ -70,7 +70,7 @@
 										<?php } ?>
 									</select>
 								</div>
-								<a href="<?php echo base_url() ?>tiket" class="btn btn-danger pull-left">Go Back </a>
+								<a href="<?php echo base_url() ?>tiket" class="btn btn-danger pull-left">Quay lại </a>
 								<button type="submit" class="btn btn-primary pull-right">Tìm kiếm </button>
 							</form>
 						</div>
@@ -79,13 +79,13 @@
 				<div class="col-lg-6">
 					<div class="card mb-10">
 						<div class="card-header">
-							<i class="fas fa-info"></i> Terminal Info
+							<i class="fas fa-info"></i> Lịch trình di chuyển
 						</div>
 						<div class="card-body">
 							<table class="table table-bordered table-condensed" style="font-size:12px;" id="mydata">
 								<thead>
 									<tr>
-										<th style="text-align:center;">City</th>
+										<th style="text-align:center;">Thành phố</th>
 										<th>Terminal</th>
 									</tr>
 								</thead>
@@ -147,24 +147,25 @@
 			<div class="modal-body">
 				<div class="table-responsive">
 					<ol class="ordered-list" align="justify"><span class="center_content2">
-					<li>Select date and select your origin and destination terminal/city in order to search for available schedules.
-							<li>Search for tickets then click on the <b>Select </b> button on the ticket you want to book.
+					<li>Chọn ngày và chọn nhà thành phố xuất phát và đến của bạn để tìm kiếm lịch trình có sẵn.
+							<li>Tìm kiếm vé sau đó nhấp vào nút <b>Chọn</b> trên vé bạn muốn đặt.
 							</li>
-							<li>The system will redirect you to seat selection page where you have to <b>select any seats</b> [Max.4 seats at a time]</li>
-							<li>After selection of seats, click on the <b>Next </b>button to proceed. </li>
-							<li>Fill up your ticket details by providing customer's details such as Passenger's Name, Age and other required <b>Customer Identity</b>. With it, select any of the available bank [as a Payment Method] to book tickets.</li>
-							<li>After submitting the form, the bookings are done <b>[temporarily]</b>. The system will provide you with a <b>QR Code</b> and you've to make payments.</li>
-							<li>All the payment instructions are provided in the tickets page.</li>
-							<li>Following that, click on the <b>Payment Confirmation</b> button to submit your payment details with an attachment of <b>proof image</b>.</li>
-							<li>At last, you payment request will be sent for <b>verification</b>. </li>
-							<li>You will also receive an <b>E-Ticket</b> onces after the payment gets verified. </li>
-							<li>If you have made a payment, bring proof of payment at the time of departure and exchange it one hour before departure. </li>
+							<li>Hệ thống sẽ chuyển hướng bạn đến trang chọn chỗ ngồi, tại đó bạn phải <b>chọn bất kỳ chỗ ngồi nào</b> [Tối đa 4 chỗ ngồi cùng một lúc]</li>
+							<li>Sau khi chọn chỗ ngồi, hãy nhấp vào nút <b>Tiếp theo</b> để tiếp tục.</li>
+							<li>Điền thông tin vé của bạn bằng cách cung cấp thông tin khách hàng như Tên hành khách, Tuổi và các thông tin cần thiết khác 
+								<b></b>Với phương thức này, bạn có thể chọn bất kỳ ngân hàng nào có sẵn [làm Phương thức thanh toán] để đặt vé.</li>
+							<li>Sau khi gửi biểu mẫu, việc đặt chỗ được thực hiện <b>[tạm thời]</b>. Hệ thống sẽ cung cấp cho bạn một <b>Mã QR</b> và bạn phải thực hiện thanh toán.</li>
+							<li>Tất cả các hướng dẫn thanh toán đều được cung cấp trên trang vé.</li>
+<li>Sau đó, nhấn vào nút <b>Xác nhận Thanh toán</b> để gửi chi tiết thanh toán của bạn kèm theo hình ảnh <b>bằng chứng thanh toán</b>.</li>
+<li>Cuối cùng, yêu cầu thanh toán của bạn sẽ được gửi để <b>xác minh</b>.</li>
+<li>Bạn cũng sẽ nhận được một <b>Vé điện tử (E-Ticket)</b> sau khi thanh toán được xác nhận.</li>
+<li>Nếu bạn đã thực hiện thanh toán, hãy mang theo bằng chứng thanh toán vào thời điểm khởi hành và đổi vé trước giờ khởi hành một giờ.</li>
 						</span></ol>
 					<w:worddocument></w:worddocument>
 				</div>
 			</div>
 			<div class="modal-footer">
-				<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+				<button type="button" class="btn btn-danger" data-dismiss="modal">Đóng</button>
 			</div>
 		</div>
 	</div>

@@ -208,7 +208,7 @@
 													<div class="alert alert-success" role="alert">
 														<p>Sau khi chọn chỗ ngồi, vui lòng nhấp vào nút 'Tiếp theo' để tiếp tục.</p>
 														<div class='btn-group'>
-															<a href="<?php echo base_url('tiket/cekjadwal/'.$tanggal.'/'.$asal['kd_tujuan'].'/'.$jadwal['kota_tujuan']) ?>" class='btn btn-default'>Go Back</a>
+															<a href="<?php echo base_url('tiket/cekjadwal/'.$tanggal.'/'.$asal['kd_tujuan'].'/'.$jadwal['kota_tujuan']) ?>" class='btn btn-default'>Quay lại</a>
 															<input class="btn btn-info pull-right" disabled="disabled" type="submit" value="Next">
 															
 														</div>
