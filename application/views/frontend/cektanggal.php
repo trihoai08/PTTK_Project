@@ -39,9 +39,15 @@
 						</div>
 						<div class="card-body">
 							<div class="alert alert-warning" role="alert">
+<<<<<<< HEAD
 								<p><b>Lưu ý</b></p>
 								<P>Trước khi mua vé, vui lòng xem  <b><i data-toggle="modal"
 											data-target="#exampleModal">Làm thế nào để coi vé ?</i></b></P>
+=======
+								<p><b>Lưu ý!!</b></p>
+								<P>Before Buying Tickets, Please have a look >> <b><i data-toggle="modal"
+											data-target="#exampleModal">How to book?</i></b></P>
+>>>>>>> 874b6aece7603f2a1eb7522d2b25298d9ac1791f
 							</div>
 							<form action="<?php echo base_url() ?>tiket/cekjadwal?>" method="get">
 								<div class="form-group">
