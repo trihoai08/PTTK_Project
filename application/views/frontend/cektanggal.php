@@ -39,7 +39,7 @@
 						</div>
 						<div class="card-body">
 							<div class="alert alert-warning" role="alert">
-								<p><b>IMPORTANT!!</b></p>
+								<p><b>Lưu ý!!</b></p>
 								<P>Before Buying Tickets, Please have a look >> <b><i data-toggle="modal"
 											data-target="#exampleModal">How to book?</i></b></P>
 							</div>
