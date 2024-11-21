@@ -15,7 +15,7 @@
 		<meta charset="UTF-8">
 		<!-- Log on to codeastro.com for more projects -->
 		<!-- Site Title -->
-		<title>BUS TICKET BOOKING</title>
+		<title>Đặt vé xe khách</title>
 		<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet">
 		<!--
 		CSS
@@ -43,8 +43,8 @@
 				                    </button>
 				                  </form>
 								<div class="text-center">
-									<p><a class="d-block small mt-3" href="<?php echo base_url() ?>login/daftar">Register</a>
-									<a class="d-block small" href="<?php echo base_url() ?>login">Login</a>
+									<p><a class="d-block small mt-3" href="<?php echo base_url() ?>login/daftar">Đăng kýr</a>
+									<a class="d-block small" href="<?php echo base_url() ?>login">Đăng Nhập </a>
 									</p>
 								</div>
 							</div>

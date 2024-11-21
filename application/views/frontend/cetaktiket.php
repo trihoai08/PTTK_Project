@@ -90,14 +90,14 @@
             <pre>
                 <b><span style='font-size:15px'>Ticket Details </span></b>
                 </br>
-                Booking Code : <?php echo $cetak[0]['kd_order'];?></br>
-                Schedule Code : <?php echo $cetak[0]['kd_jadwal'];?></br>
-                Date : <?php echo $cetak[0]['tgl_beli_order'];?></br>
-                Customer : <?php echo $cetak[0]['nama_order'];?></br>
+                Mã đặt chỗ : <?php echo $cetak[0]['kd_order'];?></br>
+                Mã lịch trình : <?php echo $cetak[0]['kd_jadwal'];?></br>
+                Ngày : <?php echo $cetak[0]['tgl_beli_order'];?></br>
+                Khách hàng : <?php echo $cetak[0]['nama_order'];?></br>
                 Schedule : <?php echo hari_indo(date('N',strtotime($cetak[0]['tgl_berangkat_order']))).', '.tanggal_indo(date('Y-m-d',strtotime(''.$cetak[0]['tgl_berangkat_order'].'')));?><br>
-                Departure DateTime : <?php echo date('H:i',strtotime($cetak[0]['jam_berangkat_jadwal'])).' To '.date('H:i',strtotime($cetak[0]['jam_tiba_jadwal'])) ?>
-                Departing from : <?php echo strtoupper($asal['kota_tujuan']);?></br>
-                Destination to : <?php echo strtoupper($cetak[0]['kota_tujuan']); ?>
+                Ngày giờ khởi hành : <?php echo date('H:i',strtotime($cetak[0]['jam_berangkat_jadwal'])).' To '.date('H:i',strtotime($cetak[0]['jam_tiba_jadwal'])) ?>
+                Khởi hành từ: <?php echo strtoupper($asal['kota_tujuan']);?></br>
+                Điểm đến : <?php echo strtoupper($cetak[0]['kota_tujuan']); ?>
             </pre>
         </td>
     </tr>
@@ -106,11 +106,11 @@
   <table width="100%">
     <thead style="background-color: lightgray;">
       <tr>
-        <th>Ticket No.</th>
-        <th>Passenger</th>
-        <th>Age </th>
-        <th>Seat</th>
-        <th>Price</th>
+        <th>Số vé.</th>
+        <th>Hành khách</th>
+        <th>Tuổi </th>
+        <th>Chỗ ngồi</th>
+        <th>Giá vé</th>
       </tr>
     </thead>
     <tbody>
@@ -133,7 +133,7 @@
     </tfoot>
   </table>
   <div id="container">
-    <h1>Terms and Conditions</h1>
+    <h1>Điều khoản và điều kiện </h1>
 
     <div id="body">
         <ol type="1">

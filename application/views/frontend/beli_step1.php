@@ -15,7 +15,7 @@
 		<meta charset="UTF-8">
 		<!-- Log on to codeastro.com for more projects -->
 		<!-- Site Title -->
-		<title>BUS TICKET BOOKING</title>
+		<title>ĐẶT VÉ XE KHÁCH</title>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 		<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet">
@@ -33,21 +33,21 @@
 						<!-- Default Card Example -->
 						<div class="card mb-5">
 							<div class="card-header">
-								<i class="fas fa-info-circle"></i> Ticket Description
+								<i class="fas fa-info-circle"></i> Mô tả vé
 							</div>
 							<div class="card-body">
 								<ul>
-									<li>► Destination <b><?php echo $asal['kota_tujuan']." - ".$jadwal['kota_tujuan']." [".$jadwal['kd_jadwal']."]"; ?></b></li>
-									<li>► Name of Bus  <b><?php echo $jadwal['nama_bus'];  ?></b></li>
-									<li>► Bus Number  <b><?php echo $jadwal['plat_bus'];  ?></b></li>
-									<li>► Departure <b><?php echo strtoupper($asal['kota_tujuan'])." - ".$asal['terminal_tujuan']; ?></b></li>
-									<li>► Arrival <b><?php echo strtoupper($jadwal['kota_tujuan'])." - ".$jadwal['terminal_tujuan']; ?></b></li>
-									<li>► Prices: <b>$<?php echo number_format((float)($jadwal['harga_jadwal']),0,",",".") ; ?></b></li>
-									<li>► Depart Date <b><?php echo nama_hari($tanggal).",".tgl_indo($tanggal) ?></b></li>
-									<li>► Depart. Time <b>at <?php echo $jadwal['jam_berangkat_jadwal']; ?></b></li>
-									<li>► Arrival Time <b>at <?php echo $jadwal['jam_tiba_jadwal']; ?> </b></li>
-									<li>► Please select a seat</li>
-									<li>► Select a maximum of 4 seats</li>
+									<li>►Điểm đến <b><?php echo $asal['kota_tujuan']." - ".$jadwal['kota_tujuan']." [".$jadwal['kd_jadwal']."]"; ?></b></li>
+									<li>► Tên xe buýt  <b><?php echo $jadwal['nama_bus'];  ?></b></li>
+									<li>► Số xe  <b><?php echo $jadwal['plat_bus'];  ?></b></li>
+									<li>► Ngày khởi hành<b><?php echo strtoupper($asal['kota_tujuan'])." - ".$asal['terminal_tujuan']; ?></b></li>
+									<li>► Đến<b><?php echo strtoupper($jadwal['kota_tujuan'])." - ".$jadwal['terminal_tujuan']; ?></b></li>
+									<li>►Giá vé: <b>$<?php echo number_format((float)($jadwal['harga_jadwal']),0,",",".") ; ?></b></li>
+									<li>► Ngày khởi hành <b><?php echo nama_hari($tanggal).",".tgl_indo($tanggal) ?></b></li>
+									<li>► Thời gian Khởi hành.  <b>at <?php echo $jadwal['jam_berangkat_jadwal']; ?></b></li>
+									<li>► Thời gian đến <b>lúc <?php echo $jadwal['jam_tiba_jadwal']; ?> </b></li>
+									<li>► Vui lòng chọn chỗ </li>
+									<li>► Chọn tối đa 4 chỗ </li>
 								</ul>
 							</div>
 						</div>
@@ -58,7 +58,7 @@
 							<!-- Default Card Example -->
 							<div class="card mb-5" >
 								<div class="card-header">
-									<i class="fas fa-bus"></i> Seat Selection
+									<i class="fas fa-bus"></i> Lựa chọn chỗ ngồi
 								</div>
 								<center class="">
 								<table class="">
@@ -203,10 +203,10 @@
 												<!-- Default Card Example -->
 												<div class="card mb-5">
 													<div class="card-header">
-														<i class="fas fa-bookmark"></i> Booking Confirmation
+														<i class="fas fa-bookmark"></i> Xác nhận đặt vé
 													</div>
 													<div class="alert alert-success" role="alert">
-														<p>After selecting a seat, please click the 'Next' button to proceed.</p>
+														<p>Sau khi chọn chỗ ngồi, vui lòng nhấp vào nút 'Tiếp theo' để tiếp tục.</p>
 														<div class='btn-group'>
 															<a href="<?php echo base_url('tiket/cekjadwal/'.$tanggal.'/'.$asal['kd_tujuan'].'/'.$jadwal['kota_tujuan']) ?>" class='btn btn-default'>Go Back</a>
 															<input class="btn btn-info pull-right" disabled="disabled" type="submit" value="Next">

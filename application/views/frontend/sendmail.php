@@ -11,7 +11,7 @@
 			<tr class="header" style="background-color:#484B51;">
 				<td style="padding-right:10px;" align="left">
 					<a href="<?= base_url() ?>" target="_blank">
-						<h4>BUS TICKET BOOKING</h4>
+						<h4>ĐẶT VÉ XE KHÁCH</h4>
 					</a>
 				</td>
 				<td style="padding-right:10px;" align="right">
@@ -23,15 +23,15 @@
 			<tr>
 				<td colspan="2">
 					<p style="text-align: justify; padding: 10px;">
-						Dear Customer,<br>
-						Thank you for using BTBS.
+					Kính gửi Quý khách hàng,<br>
+					Cảm ơn bạn đã sử dụng BTBS.
 					</p>
 					<p style="text-align: justify; padding: 10px;">
-					Here's a Summary of Your Purchases:
+					Sau đây là tóm tắt về các giao dịch của bạn:
 						<table width="100%" style="font-size: 14px; margin: 10px;">
 								<tr>
 								<td>
-								Account Number Transfer Manual
+								Hướng dẫn chuyển số tài khoản
 									</td><td>:</td>
 									<td>
 										<strong><?= $sendmail['nomrek_bank']; ?></strong>
@@ -39,7 +39,7 @@
 								</tr>
 								<tr>
 								<td>
-								On behalf of
+								Thay mặt cho
 									</td><td>:</td>
 									<td>
 										<strong><?= $sendmail['nasabah_bank']; ?></strong>
@@ -47,7 +47,7 @@
 								</tr>
 								<tr>
 									<td>
-									Recipient Bank
+									Ngân hàng nhận
 									</td>
 									<td>:</td>
 									<td>
@@ -56,7 +56,7 @@
 								</tr>
 								<tr>
 									<td>
-									Amount paid
+									Số tiền đã thanh toán
 									</td>
 									<td>:</td>
 									<td>
@@ -66,7 +66,7 @@
 								</tr>
 								<tr>
 									<td>
-									Booking Number
+									Số đặt chỗ
 									</td>
 									<td>:</td>
 									<td>
@@ -75,18 +75,18 @@
 								</tr>
 								<tr>
 									<td>
-									Purchase Description
+									Mô tả mua vé
 									</td>
 									<td>:</td>
 									<td>
-										<strong>Schedule Code <?= $sendmail['kd_jadwal'] ?></strong><br>
-										<strong>Depart <?= hari_indo(date('N',strtotime($sendmail['tgl_berangkat_order']))).', '.tanggal_indo(date('Y-m-d',strtotime(''.$sendmail['tgl_berangkat_order'].''))).', '.date('H:i',strtotime($sendmail['jam_berangkat_jadwal'])); ?></strong><br>
-										<strong><?= $count; ?> Seat</strong>
+										<strong>Mã lịch trình <?= $sendmail['kd_jadwal'] ?></strong><br>
+										<strong>Khởi hành <?= hari_indo(date('N',strtotime($sendmail['tgl_berangkat_order']))).', '.tanggal_indo(date('Y-m-d',strtotime(''.$sendmail['tgl_berangkat_order'].''))).', '.date('H:i',strtotime($sendmail['jam_berangkat_jadwal'])); ?></strong><br>
+										<strong><?= $count; ?>Ghế</strong>
 									</td>
 								</tr>
 								<tr>
 									<td>
-									Purchase Date
+									Ngày mua
 									</td>
 									<td>:</td>
 									<td>
@@ -95,7 +95,7 @@
 								</tr>
 								<tr>
 									<td>
-									Valid until
+									Có hiệu lực cho đến
 									</td>
 									<td>:</td>
 									<td>
@@ -112,7 +112,7 @@
 									<tr>
 										<td>
 											<div class="col-md-12 col-xs-12">
-												<h4>How to Transfer Via</h4>
+												<h4>Làm thế nào để chuyển qua</h4>
 												<div class="hr hr8 hr-double hr-dotted"></div>
 												<div class="row">
 													<div class="col-md-4">
@@ -120,51 +120,51 @@
 															<center><h4>ATM</h4></center>
 															<div class="hr hr8 hr-double hr-dotted"></div>
 															<ol style="padding:0;">
-																<li>Pay Guide</li>
-																<li>Select Menu <span class="label">Other Transactions</span></li>
-																<li>Select <span class="label">Transfer</span></li>
-																<li>Select <span class="label">To account <?= $sendmail['nama_bank'];; ?> </span></li>
-																<li>Enter Account Number <span class="label"><?= $sendmail['nomrek_bank']; ?></span></li>
-																<li>Select <span class="label">Right</span></li>
-																<li>Select <span class="label">Yes</span></li>
-																<li>Take your proof of payment</li>
-																<li>Finished</li>
+																<li>Hướng dẫn thanh toán</li>
+																<li>Chọn Menu <span class="label">Các giao dịch khác</span></li>
+																<li>Chọn <span class="label">Chuyển khoản</span></li>
+																<li>Chọn <span class="label">Tài khoản <?= $sendmail['nama_bank'];; ?> </span></li>
+																<li>Nhập số tài khoản <span class="label"><?= $sendmail['nomrek_bank']; ?></span></li>
+																<li>Chọn <span class="label">Right</span></li>
+																<li>Chọn <span class="label">Yes</span></li>
+																<li><Table>Hãy mang theo hình ảnh thanh toán của bạn</Table></li>
+																<li>Hoàn Thành</li>
 															</ol>
 														</div>
 													</div>
 													<div class="col-md-4">
 														<div style="border:1px solid #fd7521;margin:2px;padding:5px;">
-															<center><h4>MOBILE BANKING</h4></center>
+															<center><h4>Ứng dụng ngân hàng trên di động</h4></center>
 															<div class="hr hr8 hr-double hr-dotted"></div>
 															<ol style="padding:0;">
-																<li>Login Mobile Banking</li>
-																<li>Select <span class="label">m-Transfer</span></li>
-																<li>Select <span class="label">BCA Account</span></li>
-																<li>Enter Account Number<span class="label"><?= $sendmail['nomrek_bank'] ?></span></li>
-																<li>Click <span class="label">Send</span></li>
-																<li>VA information will be displayed</li>
-																<li>Click <span class="label">OK</span></li>
-																<li>Input <span class="label">PIN</span></li>
+																<li>Đăng nhập Ngân hàng </li>
+																<li>Chọn <span class="label">Chuyển </span></li>
+																<li>Select <span class="label">Tài Khoản</span></li>
+																<li>Nhập số tài khoản<span class="label"><?= $sendmail['nomrek_bank'] ?></span></li>
+																<li>Chọn <span class="label">Gửi</span></li>
+																<li>Thông tin khách hàng sẽ được hiển thị</li>
+																<li>Chọn <span class="label">OK</span></li>
+																<li>Nhập mã <span class="label">PIN</span></li>
 																<li>Mobile Banking</li>
-																<li>Proof of payment is displayed</li>
-																<li>Finished</li>
+																<li>Bằng chứng thanh toán được hiển thị</li>
+																<li>Hoàn thành</li>
 															</ol>
 														</div>
 													</div>
 													<div class="col-md-4">
 														<div style="border:1px solid #fd7521;margin:2px;padding:5px;">
-															<center><h4>INTERNET BANKING</h4></center>
+															<center><h4>Ngân hàng online</h4></center>
 															<div class="hr hr8 hr-double hr-dotted"></div>
 															<ol style="padding:0;">
-																<li>Select <span class="label">Fund Transactions</span></li>
-																<li>Select <span class="label">Transfer to BCA Account</span></li>
-																<li>Enter Account Number <span class="label"><?= $sendmail['nomrek_bank'] ?></span></li>
+																<li>Chọn <span class="label">Giao dịch quỹ</span></li>
+																<li>CHọn <span class="label">Chuyển đến tài khoản BCA</span></li>
+																<li>Nhập số tài khoản <span class="label"><?= $sendmail['nomrek_bank'] ?></span></li>
 																<li></li>
-																<li>Click <span class="label">Continue</span></li>
-																<li>Input Response <span class="label">KeyBCA Appli 1</span></li>
-																<li>Click <span class="label">Send</span></li>
-																<li>Proof of payment is displayed</li>
-																<li>Finished</li>
+																<li>Chọn <span class="label">Tiếp tục</span></li>
+																<li>Đầu vào <span class="label">KeyBCA Appli 1</span></li>
+																<li>Chọn <span class="label">Send</span></li>
+																<li>Bằng chứng thanh toán được hiển thị</li>
+																<li>Hoàn thành</li>
 															</ol>
 														</div>
 													</div>
@@ -179,8 +179,8 @@
 								<td colspan="2">
 									<p style="padding:10px;">
 										<br>
-										Best regards,<br>
-										<span style="color:#fd7521;"><strong>Bus Ticket Booking System</strong></span>
+										Trân trọng,<br>
+										<span style="color:#fd7521;"><strong>Hệ thống đặt vé xe khách</strong></span>
 										<br>
 										<br>
 									</p>

@@ -41,7 +41,7 @@
 					    	<a href="<?php echo base_url('assets/frontend/upload/qrcode/'.$tiket) ?>.png" class="btn btn-danger" download>Download Qr Code</a> 
 					    	<a href="<?php echo base_url('tiket/payment/'.$tiket) ?>" class="btn btn-success">Check Payment</a>
 					    <br>
-					    <p class="card-text">Please Save Your Booking Code And QrCode To Continue The Payment Process.</p>
+					    <p class="card-text">Vui lòng lưu mã đặt chỗ và mã QR để tiếp tục quá trình thanh toán.</p>
 					  </div>
 					</div>
 					</div>

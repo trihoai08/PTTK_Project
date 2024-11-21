@@ -32,15 +32,15 @@
 						<!-- Default Card Example -->
 						<div class="card wobble">
 					  <div class="card-header">
-					   <i class="fas fa-ticket"></i> Check My Tickets
+					   <i class="fas fa-ticket"></i> Kiểm tra vé của tôi
 					  </div>
 					  <div class="card-body">
 					    <form action="<?php echo base_url() ?>tiket/cekorder" method="post">
 									<div class="form-group">
-										<label for="exampleInputEmail1">Enter your booking code</label>
+										<label for="exampleInputEmail1">Nhập mã đặt chỗ của bạn</label>
 										<input type="text" id="" class="form-control" id="" name="kodetiket" placeholder="Ticket Code" required="">
 									</div>
-									<button type="submit" class="btn btn-success pull-right">Search </button>
+									<button type="submit" class="btn btn-success pull-right">Tìm kiếm </button>
 								</form>
 					  </div>
 					</div>

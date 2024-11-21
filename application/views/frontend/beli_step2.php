@@ -15,7 +15,7 @@
 		<meta charset="UTF-8">
 		<!-- Log on to codeastro.com for more projects -->
 		<!-- Site Title -->
-		<title>BUS TICKET BOOKING</title>
+		<title>DẶT VÉ XE KHÁCH</title>
 		<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet">
 		<!--CSS-->
 		<?php $this->load->view('frontend/include/base_css'); ?>
@@ -35,22 +35,22 @@
 							<?php $i = 1; foreach ($kursi as $row ) { ?>
 							<div class="card mb-5">
 								<div class="card-header">
-									<i class="fas fa-id-card"></i> Seat Number <?php echo $row; ?>
+									<i class="fas fa-id-card"></i> Số ghế <?php echo $row; ?>
 								</div>
 								<div class="card-body">
 									<div class="form-group">
-										<label for="CN">Passenger's Name</label>
+										<label for="CN">Tên Hành khách</label>
 										<input type="text" id="" class="form-control" id="" name="nama[]" placeholder="Seat Number <?php echo $row ?> On behalf of" required>
 										<input type="hidden" name="kursi[]" value="<?php echo $row ?>">
 									</div>
 									<div class="form-group">
 										<select name="tahun[]" class="form-control js-example-basic-single" required>
-											<option value="" selected disabled="">Age of Passenger</option>
+											<option value="" selected disabled="">Tuổi hành khách </option>
 											<?php
 											$thn_skr = 90;
 											for ($x = $thn_skr; $x >= 1; $x--) {
 											?>
-											<option value="<?php echo $x ?>"><?php echo $x ?> Years</option>
+											<option value="<?php echo $x ?>"><?php echo $x ?> Năm </option>
 											<?php
 											}
 											?>
@@ -95,14 +95,14 @@
 										<div class="col">
 											<div class="card">
 												<div class="card-header">
-													<i class="fas fa-dollar-sign"></i> Payment Method
+													<i class="fas fa-dollar-sign"></i>Phương thức thanh toán
 												</div>
 												<div class="card-body">
 													<form action="<?php echo base_url() ?>tiket/cektiketmu" method="post">
 														<div class="form-group">
-															<label for="exampleInputEmail1">Select Bank </label>
+															<label for="exampleInputEmail1">Chọn ngân hàng </label>
 															<select class="form-control" name="bank" required>
-																<option value="" selected disabled="">Select Bank</option>
+																<option value="" selected disabled="">Chọn ngân hàng</option>
 																<?php foreach ($bank as $row) { ?>
 																<option value="<?php echo $row['kd_bank'] ?>"><?php echo $row['nama_bank']; ?></option>
 																<?php } ?>
@@ -110,8 +110,8 @@
 														</div>
 														<hr>
 														<div class='form-group'>
-														<a href='javascript:history.back()' class='btn btn-default pull-left'>Go Back</a>
-														<button class="btn btn-success pull-right">Process Ticket</button>
+														<a href='javascript:history.back()' class='btn btn-default pull-left'>Quay lại</a>
+														<button class="btn btn-success pull-right">Quy trình vé</button>
 													</div>
 												</form>
 												<!-- Log on to codeastro.com for more projects -->

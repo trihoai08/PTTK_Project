@@ -15,7 +15,7 @@
 		<meta charset="UTF-8">
 		<!-- Log on to codeastro.com for more projects -->
 		<!-- Site Title -->
-		<title>Get Tickets</title>
+		<title>Nhận vé </title>
 		<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet">
 		<!--CSS-->
 		<link rel="stylesheet" type="text/css" href="<?= base_url() ?>assets/frontend/datepicker/dcalendar.picker.css">
@@ -32,21 +32,21 @@
 						<!-- Default Card Example -->
 						<div class="card wobble animated">
 					  <div class="card-header">
-					  Payment Confirmation
+					  Xác nhận thanh toán
 					  </div>
 					  <div class="card-body">
 					    <form action="<?= base_url() ?>tiket/insertkonfirmasi" method="post" enctype="multipart/form-data">
 									<div class="form-group">
-										<label for="exampleInputEmail1">Booking Code</label>
+										<label for="exampleInputEmail1">Mã đặt chỗ</label>
 										<input type="text" id="" class="form-control" id="" name="kd_order" value="<?= $id ?>" placeholder="Ticket Code">
 									</div>
 									<div class="form-group">
-										<label for="exampleInputEmail1">Your BANK</label>
+										<label for="exampleInputEmail1">NGÂN HÀNG CỦA BẠN</label>
 										<select class="form-control" name="bank_km">
-											<option value="" selected disabled="">Select Bank</option>
-											<option value="New Leaf Bank" >New Leaf Bank</option>
-											<option value="Zenith Bank">Zenith Bank</option>
-											<option value="WestView Bank">WestView Bank</option>
+											<option value="" selected disabled="">Chọn ngân hàngk</option>
+											<option value="New Leaf Bank" >Mb bank</option>
+											<option value="Zenith Bank">VietCom Bank</option>
+											<option value="WestView Bank">TechCom Bank</option>
 											<option value="Aurora">Aurora</option>
 											<option value="RoyalCrown Bank">RoyalCrown Bank</option>
 										</select>
@@ -59,22 +59,22 @@
 										</select> -->
 									</div>
 									<div class="form-group">
-										<label for="exampleInputEmail1">Account number</label>
+										<label for="exampleInputEmail1">Số tài khoản</label>
 										<input type="number" class="form-control" name="nomrek" value="" placeholder="Account number">
 									</div>
 									<div class="form-group">
-										<label for="exampleInputEmail1">Name of the sender</label>
+										<label for="exampleInputEmail1">Tên người gửi</label>
 										<input type="text" class="form-control" name="nama" value="" placeholder="Name of the sender">
 									</div>
 									<div class="form-group">
-										<label for="exampleInputEmail1">Payment Amount</label>
+										<label for="exampleInputEmail1">Số tiền thanh toán</label>
 										<input type="number" class="form-control" name="total" value="<?= $total ?>" placeholder="Total price" readonly>
 									</div>
 									<div class="form-group">
-										<label for="exampleInputEmail1">Upload Transaction Photo</label>
+										<label for="exampleInputEmail1">Tải lên hình ảnh giao dịch</label>
 										<input type="file" class="form-control" name="userfile" required="">
 									</div>
-									<button type="submit" class="btn btn-success pull-right">Submit </button>
+									<button type="submit" class="btn btn-success pull-right">Gửi </button>
 								</form>
 					  </div>
 					</div>

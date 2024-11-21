@@ -6,20 +6,20 @@
 			      </div>
 			      <nav id="nav-menu-container">
 			        <ul class="nav-menu">
-			          <li class="menu"><a href="<?php echo base_url() ?>">Home</a></li>
-			          <li><a href="<?php echo base_url() ?>tiket">Make Bookings</a></li>
-			          <li class="menu"><a href="<?php echo base_url() ?>tiket/cektiket">Check Tickets</a></li>
+			          <li class="menu"><a href="<?php echo base_url() ?>">Trang chủ</a></li>
+			          <li><a href="<?php echo base_url() ?>tiket">Đặt chỗ</a></li>
+			          <li class="menu"><a href="<?php echo base_url() ?>tiket/cektiket">Kiểm tra vé</a></li>
 			          <?php if ($this->session->userdata('username')) { ?>
 				      	<li class="menu-has-children"><a href="#">Hi, <?php echo $this->session->userdata('nama_lengkap'); ?></a>
 						<ul>
 							<li><a href="<?php echo base_url() ?>profile/profilesaya/<?php echo $this->session->userdata('kd_pelanggan') ?>"><i class="fas fa-id-card"></i> My Profile</a></li>
 							<li><a href="<?php echo base_url() ?>profile/tiketsaya/<?php echo $this->session->userdata('kd_pelanggan') ?>"><i class="fas fa-ticket-alt"></i> My Ticket</a></li>
-							<li><a href="<?php echo base_url() ?>login/logout"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+							<li><a href="<?php echo base_url() ?>login/logout"><i class="fas fa-sign-out-alt"></i> Dăng xuất</a></li>
 						</ul>
 						</li>
 				      <?php }else{ ?>  
-				  	  <li class="menu wobble animated"><a href="<?php echo base_url() ?>login/Daftar">Register</a></li>
- 					  <li><a href="<?php echo base_url() ?>login">Login</a></li>
+				  	  <li class="menu wobble animated"><a href="<?php echo base_url() ?>login/Daftar">Đăng kí</a></li>
+ 					  <li><a href="<?php echo base_url() ?>login">Đăng nhập</a></li>
 				  	  <?php } ?>
 			        </ul>
 			      </nav><!-- #nav-menu-container -->		    		

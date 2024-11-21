@@ -40,12 +40,12 @@
 						<div class="card-body">
 							<div class="alert alert-warning" role="alert">
 								<p><b>IMPORTANT!!</b></p>
-								<P>Before Buying Tickets, Please have a look>> <b><i data-toggle="modal"
+								<P>Before Buying Tickets, Please have a look >> <b><i data-toggle="modal"
 											data-target="#exampleModal">How to book?</i></b></P>
 							</div>
 							<form action="<?php echo base_url() ?>tiket/cekjadwal?>" method="get">
 								<div class="form-group">
-									<label for="exampleInputEmail1">Select Date</label>
+									<label for="exampleInputEmail1">Chọn ngày</label>
 									<input placeholder="Enter date" type="text" class="form-control datepicker"
 										name="tanggal" required="">
 								</div>
@@ -61,9 +61,9 @@
 									</select>
 								</div>
 								<div class="form-group">
-									<label for="exampleInputEmail1">Destination</label>
+									<label for="exampleInputEmail1">Điểm đến</label>
 									<select name="tujuan" class="form-control js-example-basic-single">
-										<option value="" selected disabled="">Choose Destination</option>
+										<option value="" selected disabled="">Chọn điểm đến</option>
 										<?php foreach ($tujuan as $row ) { ?>
 										<option value="<?php echo $row['kota_tujuan'] ?>">
 											<?php echo strtoupper($row['kota_tujuan']); ?></option>
@@ -71,7 +71,7 @@
 									</select>
 								</div>
 								<a href="<?php echo base_url() ?>tiket" class="btn btn-danger pull-left">Go Back </a>
-								<button type="submit" class="btn btn-primary pull-right">Search </button>
+								<button type="submit" class="btn btn-primary pull-right">Tìm kiếm </button>
 							</form>
 						</div>
 					</div>

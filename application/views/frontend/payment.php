@@ -32,18 +32,18 @@
 						<!-- Default Card Example -->
 						<div class="card mb-5">
 							<div class="card-header" align="center">
-								<b><i class="fas fa-ticket-alt"></i> BOOKING CODE <?= $tiket[0]['kd_order']; ?></b>
+								<b><i class="fas fa-ticket-alt"></i> <?= $tiket[0]['kd_order']; ?></b>
 							</div>
 							<div class="card-body">
 								<div class="table-responsive">
 									<table class="table table-striped table-bordered">
 										<thead>
 											<tr>
-												<th scope="col">Ticket</th>
-												<th scope="col">Schedule No. [Bus Code]</th>
-												<th scope="col">Departure</th>
-												<th scope="col">Seat No.</th>
-												<th scope="col">Price</th>
+												<th scope="col">Vé</th>
+												<th scope="col">Lịch trình số [Mã xe]</th>
+												<th scope="col"> Khởi hành</th>
+												<th scope="col">Số ghế.</th>
+												<th scope="col">Giá vé</th>
 											</tr>
 										</thead>
 										<tbody>
@@ -57,7 +57,7 @@
 												<td>$<?= $row['harga_jadwal']; ?></td>
 											</tr>
 											<?php } ?>
-											<td colspan="5"> <b class="pull-right">Total $<?php $total = $count * $tiket[0]['harga_jadwal'] ; echo $total ?></b></td>
+											<td colspan="5"> <b class="pull-right">Tổng cộng <?php $total = $count * $tiket[0]['harga_jadwal'] ; echo $total ?></b></td>
 										</tbody>
 									</table>
 								</div>
@@ -69,13 +69,13 @@
 						<!-- Default Card Example -->
 						<div class="card">
 							<div class="card-header" align="center">
-								<i class="fas fa-ticket-alt"></i> Payment Process
+								<i class="fas fa-ticket-alt"></i> Quy trình thanh toán
 							</div>
 							<div class="card-body" align="center">
-								<h4>Please Complete Your Payment Immediately!</h4><br>
-								<h6>Your payment deadline will end on</h6>
+								<h4>Vui lòng hoàn tất thanh toán ngay lập tức!</h4><br>
+								<h6>Thời hạn thanh toán của bạn sẽ kết thúc vào</h6>
 								<h1><p id="expired"></p></h1>
-								<p>(Before <?php $expired = hari_indo(date('N',strtotime($tiket[0]['expired_order']))).', '.tanggal_indo(date('Y-m-d',strtotime(''.$tiket[0]['expired_order'].''))).', '.date('H:i',strtotime($tiket[0]['expired_order'])); echo $expired;?>)</p>
+								<p>(Trước <?php $expired = hari_indo(date('N',strtotime($tiket[0]['expired_order']))).', '.tanggal_indo(date('Y-m-d',strtotime(''.$tiket[0]['expired_order'].''))).', '.date('H:i',strtotime($tiket[0]['expired_order'])); echo $expired;?>)</p>
 								<hr>
 								<div class="medium-title col-12 mb-20">
 									<h4><p>Please transfer payment to the following account number</p></h4>
@@ -94,7 +94,7 @@
 									</div>
 								</div>
 								<div class="col-12 medium-title regular-text mt-20">
-									<h4><b> <p>a Total Sum of</p></b></h4>
+									<h4><b> <p>Tổng số tiền của</p></b></h4>
 								</div>
 								<div class="col-12 bigger-title text-orange">
 									<h3 ><p>$<?= number_format($total,0,',','.') ;?></p></h3>
@@ -102,19 +102,19 @@
 								<div class="col-14 mt-15 mb-15">
 									<hr>
 									<div class="col-md-8 mt-sm-30">
-										<h3 class="mb-20">PAYMENT GUIDE</h3>
+										<h3 class="mb-20">HƯỚNG DẪN THANH TOÁN</h3>
 										<div class="">
 											<ol class="ordered-list" align="left">
-												<li>Insert Your <?= $tiket[0]['nama_bank']; ?> ATM Card</li>
-												<li>Enter your ATM PIN</li>
-												<li>Select Other Transaction Menu</li>
-												<li>Select the Transfer menu and To Account <?= $tiket[0]['nama_bank']; ?></li>
-												<li>Enter account number <?= $tiket[0]['nama_bank']; ?> which is aimed</li>
-												<li>Enter the nominal amount of money to be transferred</li>
-												<li>The ATM screen will display your transaction data,</li>
-												<li>If the data is correct select "YES" (OK)</li>
-												<li>Done (receipt will come out from ATM machine)</li>
-												<li>Take your ATM Card</li>
+												<li>Điền thẻ <?= $tiket[0]['nama_bank']; ?> ATM của bạn</li>
+												<li>Nhập mã PIN ATM của bạn</li>
+												<li>Chọn Menu Giao dịch Khác</li>
+												<li>Chọn menu Chuyển và Đến tài khoản <?= $tiket[0]['nama_bank']; ?></li>
+												<li>Nhập số tài khoản <?= $tiket[0]['nama_bank']; ?> which is aimed</li>
+												<li>Nhập số tiền cần chuyển</li>
+												<li>Màn hình ATM sẽ hiển thị dữ liệu giao dịch của bạn,</li>
+												<li>Nếu dữ liệu đúng hãy chọn "YES" (OK)</li>
+												<li>Hoàn tất (sẽ nhận được biên lai từ máy ATM)</li>
+												<li>Lấy thẻ ATM của bạn</li>
 											</ol>
 										</div>
 									</div>

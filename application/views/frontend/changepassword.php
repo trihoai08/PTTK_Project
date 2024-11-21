@@ -15,7 +15,7 @@
 		<meta charset="UTF-8">
 		<!-- Log on to codeastro.com for more projects -->
 		<!-- Site Title -->
-		<title>Profile Saya</title>
+		<title>	</title>
 		<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet">
 		<!--CSS-->
 		<style type="text/css">
@@ -37,13 +37,13 @@
 		<section class="generic-banner relative">
 			<div class="container">
 				<div class="section-top-border">
-					<h3 class="mb-30" align="center">Change Password</h3>
+					<h3 class="mb-30" align="center">Thay đổi Mật khẩu</h3>
 					<div class="row d-flex justify-content-center">
 						<div class="col-lg-6">
 							<!-- Default Card Example -->
 							<div class="card" align="left">
 								<div class="card-header">
-									<i class="fas fa-key"></i> Password
+									<i class="fas fa-key"></i> Mật khẩu
 								</div>
 								<div class="card-body">
 									<form ction="<?php echo base_url('profile/changepassword') ?>" method="post">
@@ -67,7 +67,7 @@
 										</div>
 									  </div>
 									<a class="btn btn-danger" href="<?php echo base_url() ?>profile/profilesaya/<?php echo $this->session->userdata('kd_pelanggan') ?>">Go Back</a>
-									<button type="submit" class="btn btn-primary pull-right" >Change Password</button>
+									<button type="submit" class="btn btn-primary pull-right" >Thay đổi Mật khẩu</button>
 									</form>
 								</div>
 							</div>
