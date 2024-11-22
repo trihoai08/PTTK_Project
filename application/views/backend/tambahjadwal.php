@@ -20,7 +20,7 @@
       <!-- Log on to codeastro.com for more projects -->
       <div class="card shadow mb-4">
         <div class="card-header py-3">
-          <h6 class="m-0 font-weight-bold text-primary">Thêm Lịch Trình</h6>
+          <h6 class="m-0 font-weight-bold text-primary">Thêm chuyến xe</h6>
         </div>
         <div class="card-body">
           <div class="card-body">
@@ -28,18 +28,18 @@
               <div class="col-sm-12">
                 <form action="<?= base_url()?>backend/jadwal/tambahjadwal" method="post">
                   <div class="form-group">
-                    <label class="">Điểm Xuất Phát</label>
+                    <label class="">Điểm đi</label>
                     <select class="form-control" name="asal" required>
-                      <option value="" selected disabled="">-Chọn Điểm Xuất Phát-</option>
+                      <option value="" selected disabled="">-Chọn điểm đi-</option>
                       <?php foreach ($tujuan as $row ) { ?>
                       <option value="<?= $row['kd_tujuan'] ?>" ><?= strtoupper($row['terminal_tujuan']); ?></option>
                       <?php } ?>
                     </select>
                   </div>
                   <div class="form-group">
-                    <label class="">Điểm Đến</label>
+                    <label class="">Điểm đến</label>
                     <select class="form-control" name="tujuan" required>
-                      <option value="" selected disabled="">-Chọn Điểm Đến-</option>
+                      <option value="" selected disabled="">-Chọn điểm đến-</option>
                       <?php foreach ($tujuan as $row ) { ?>
                       <option value="<?= $row['kd_tujuan'] ?>" ><?= strtoupper($row['kota_tujuan']); ?></option>
                       <?php } ?>
@@ -48,7 +48,7 @@
                   <div class="form-group">
                     <label  class="">Xe</label>
                     <select class="form-control" name="bus">
-                      <option value="" selected disabled="">-Chọn Xe-</option>
+                      <option value="" selected disabled="">-Chọn xe-</option>
                       <?php foreach ($bus as $row ) { ?>
                       <option value="<?= $row['kd_bus'] ?>" >
                         <?= strtoupper($row['nama_bus']); ?> -<?php if ($row['status_bus'] == '1') { ?>

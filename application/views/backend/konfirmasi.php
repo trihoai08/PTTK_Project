@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title><?= $title ?></title>
+    <title>Thanh toán</title>
     <!-- css -->
     <?php $this->load->view('backend/include/base_css'); ?>
   </head>
@@ -45,7 +45,7 @@
                     <td><?= $row['nama_bank_konfirmasi']; ?></td>
                     <td><?= $row['norek_konfirmasi']; ?></td>
                     <td><?= number_format($row['total_konfirmasi'], 0, ',', '.'); ?> VNĐ</td>
-                    <td><a href="<?= base_url('backend/konfirmasi/viewkonfirmasi/'.$row['kd_order']) ?>" class="btn btn btn-info">Xem</a></td>
+                    <td align = "center"><a href="<?= base_url('backend/konfirmasi/viewkonfirmasi/'.$row['kd_order']) ?>" class="btn btn btn-info">Xem</a></td>
                   </tr>
                 <?php } ?>
             </tbody>

@@ -9,7 +9,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title><?= $title ?></title>
+  <title>Trang chủ</title>
 
   <!-- css -->
   <?php $this->load->view('backend/include/base_css'); ?>
@@ -34,7 +34,7 @@
                 <div class="card-body">
                   <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
-                      <div class="text-xs font-weight-bold text-info text-uppercase mb-1"><a href="<?= base_url('backend/order') ?>">Đơn Hàng Đang Chờ</a></div>
+                      <div class="text-xs font-weight-bold text-info text-uppercase mb-1"><a href="<?= base_url('backend/order') ?>">Chờ xác nhận vé</a></div>
                       <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $order[0]['count(kd_order)']; ?></div>
                     </div>
                     <div class="col-auto">
@@ -51,7 +51,7 @@
                 <div class="card-body">
                   <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
-                      <div class="text-xs font-weight-bold text-success text-uppercase mb-1"><a href="<?= base_url('backend/tiket') ?>">Tổng Vé Đã Bán</a></div>
+                      <div class="text-xs font-weight-bold text-success text-uppercase mb-1"><a href="<?= base_url('backend/tiket') ?>">Tổng vé đã bán</a></div>
                       <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $tiket[0]['count(kd_tiket)']; ?></div>
                     </div>
                     <div class="col-auto">
@@ -68,7 +68,7 @@
                 <div class="card-body">
                   <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
-                      <div class="text-xs font-weight-bold text-danger text-uppercase mb-1"><a href="<?= base_url('backend/konfirmasi') ?>">Danh Sách Thanh Toán</a></div>
+                      <div class="text-xs font-weight-bold text-danger text-uppercase mb-1"><a href="<?= base_url('backend/konfirmasi') ?>">Danh sách đã thanh toán</a></div>
                       <div class="row no-gutters align-items-center">
                         <div class="col-auto">
                           <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800"><?= $konfirmasi[0]['count(kd_konfirmasi)']; ?></div>
@@ -96,7 +96,7 @@
                 <div class="card-body">
                   <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
-                      <div class="text-xs font-weight-bold text-info text-uppercase mb-1"><a href="<?= base_url('backend/rute') ?>">Tổng Số Bến Xe</a></div>
+                      <div class="text-xs font-weight-bold text-info text-uppercase mb-1"><a href="<?= base_url('backend/rute') ?>">Tổng số tuyến Xe</a></div>
                       <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $terminal[0]['count(kd_tujuan)']; ?></div>
                     </div>
                     <div class="col-auto">
@@ -113,7 +113,7 @@
                 <div class="card-body">
                   <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
-                      <div class="text-xs font-weight-bold text-success text-uppercase mb-1"><a href="<?= base_url('backend/jadwal') ?>">Lịch Trình Sẵn Có</a></div>
+                      <div class="text-xs font-weight-bold text-success text-uppercase mb-1"><a href="<?= base_url('backend/jadwal') ?>">Chuyến xe sẵn Có</a></div>
                       <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $schedules[0]['count(kd_jadwal)']; ?></div>
                     </div>
                     <div class="col-auto">
@@ -130,7 +130,7 @@
                 <div class="card-body">
                   <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
-                      <div class="text-xs font-weight-bold text-primary text-uppercase mb-1"><a href="<?= base_url('backend/bus') ?>">Xe Khách Sẵn Có</a></div>
+                      <div class="text-xs font-weight-bold text-primary text-uppercase mb-1"><a href="<?= base_url('backend/bus') ?>">Xe Khách sẵn có</a></div>
                       <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800"><?= $bus[0]['count(kd_bus)']; ?></div>
                     </div>
                     <div class="col-auto">

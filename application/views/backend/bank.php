@@ -1,83 +1,109 @@
 <!DOCTYPE html>
-<html lang="vi">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <title><?= $title ?></title>
-    <!-- css -->
-    <?php $this->load->view('backend/include/base_css'); ?>
-  </head>
-  <body id="page-top">
-    <!-- navbar -->
-    <?php $this->load->view('backend/include/base_nav'); ?>
-    <!-- Begin Page Content -->
-    <div class="container-fluid">
-      <h1 class="h5 mb-2 text-gray-800">Danh Sách Quản Trị Viên Hệ Thống</h1>
-      <!-- DataTales Example -->
-      <!-- Đăng nhập tại codeastro.com để tìm thêm dự án -->
-      <div class="card shadow mb-4">
-        <div class="card-header py-3">
-           <a href="<?= base_url('backend/admin/daftar') ?>" class="btn btn-success pull-right" >
-           Thêm Tài Khoản Quản Trị
-          </a>
-        </div>
-        <div class="card-body">
-          <div class="table-responsive">
-            <table class="table table-bordered table-hover" id="dataTable" width="100%" cellspacing="0">
-            <thead class="thead-dark">
-                <tr>
-                  <th>#</th>
-                  <th>Mã Quản Trị</th>
-                  <th>Họ Tên</th>
-                  <th>Tên Đăng Nhập</th>
-                  <th>Email</th>
-                  <th>Phân Quyền</th>
-                  <!-- <th>Hành Động</th> -->
-                </tr>
-              </thead>
-              <tbody>
-                <?php $i=1;foreach ($admin as $row) { ?>
-                  <tr>
-                    <td><?= $i++; ?></td>
-                    <td><?= $row['kd_admin']; ?></td>
-                    <td><?= $row['nama_admin']; ?></td>
-                    <td><?= $row['username_admin']; ?></td>
-                    <td><?= $row['email_admin']; ?></td>
-                    <td><?php if ($row['level_admin'] == '1') { ?>
-                      CHỦ SỞ HỮU
-                    <?php }else{ ?>
-                      QUẢN TRỊ VIÊN
-                    <?php } ?>
-                    </td>
-                    <!-- <td><a href="<?= base_url('backend/home/viewadmin/'.$row['kd_admin']) ?>" class="btn btn btn-info">Xem Chi Tiết</a></td> -->
-                  </tr>
-                <?php } ?>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </div>
-    <!-- /.container-fluid -->
-  </div>
-  <!-- /.container-fluid -->
-</div>
-<!-- End of Main Content -->
-<!-- Footer -->
-<?php $this->load->view('backend/include/base_footer'); ?>
-<!-- End of Footer -->
-</div>
-<!-- End of Content Wrapper -->
-</div>
-<!-- End of Page Wrapper -->
-<!-- Đăng nhập tại codeastro.com để tìm thêm dự án -->
-<!-- Scroll to Top Button-->
-<a class="scroll-to-top rounded" href="#page-top">
-<i class="fas fa-angle-up"></i>
-</a>
-<!-- js -->
-<?php $this->load->view('backend/include/base_js'); ?>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<title><?= $title ?></title>
+	<!-- css -->
+	<?php $this->load->view('backend/include/base_css'); ?>
+</head>
+
+<body id="page-top">
+	<!-- navbar -->
+	<?php $this->load->view('backend/include/base_nav'); ?>
+	<!-- Begin Page Content -->
+	<div class="container-fluid">
+		<h1 class="h5 text-gray-800">Danh sách ngân hàng</h1>
+		<!-- DataTales Example -->
+		<!-- Log on to codeastro.com for more projects -->
+		<div class="card shadow mb-4">
+			<div class="card-header py-3">
+				<button type="button" class="btn btn-success pull-right" data-toggle="modal" data-target="#ModalTujuan">
+				Thêm ngân hàng
+				</button>
+			</div>
+			<div class="card-body">
+				<div class="table-responsive">
+					<table class="table table-bordered table-hover" id="dataTable" width="100%" cellspacing="0">
+					<thead class="thead-dark">
+							<tr>
+								<th>#</th>
+								<th>Mã ngân hàng</th>
+								<th>Tên ngân hàng</th>
+								<th>Số tài khoản</th>
+								<th>On behalf of</th>
+								<th>Action</th>
+							</tr>
+						</thead>
+						<tbody>
+							<?php $i = 1 ; foreach ($bank as $row ) { ?>
+							<tr>
+								<td><?= $i++; ?></td>
+								<td><?= $row['kd_bank']; ?></td>
+								<td><?= $row['nama_bank']; ?></td>
+								<td><?= $row['nomrek_bank']; ?></td>
+								<td><?= $row['nasabah_bank']; ?></td>
+								<td align="center"><a href="<?= base_url('backend/bank/viewbank/'.$row['kd_bank']) ?>"
+										class="btn btn btn-info">Xem</a></a>
+								</td>
+							</tr>
+							<?php } ?>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+		<!-- /.container-fluid -->
+	</div>
+	<!-- /.container-fluid -->
+	</div>
+	<!-- End of Main Content -->
+	<!-- Footer --><!-- Log on to codeastro.com for more projects -->
+	<?php $this->load->view('backend/include/base_footer'); ?>
+	<!-- Modal -->
+	<div class="modal fade" id="ModalTujuan" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+		aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">Thêm ngân hàng</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<form action="<?= base_url()?>backend/bank/tambahbank" method="post" enctype="multipart/form-data">
+						<div class="form-group">
+							<label class="">Customer Name </label>
+							<input type="text" class="form-control" name="nasabah" required placeholder="Customer Name">
+						</div>
+						<div class="form-group">
+							<label class="">Tên ngân hàng</label>
+							<input type="text" class="form-control" name="bank" required placeholder="Bank name">
+						</div>
+						<div class="form-group">
+							<label class="">Số tài khoản</label>
+							<input type="number" class="form-control" name="nomor" required placeholder="Account number">
+						</div>
+						<div class="form-group">
+							<label for="exampleInputEmail1">Tải ảnh ngân hàng</label>
+							<input type="file" class="form-control" name="userfile" required="">
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-danger" data-dismiss="modal">Đóng</button>
+							<button class="btn btn-success">Lưu</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- js -->
+	<?php $this->load->view('backend/include/base_js'); ?>
 </body>
+
 </html>

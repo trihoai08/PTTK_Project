@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,31 +13,31 @@
   <body id="page-top">
     <!-- navbar -->
     <?php $this->load->view('backend/include/base_nav'); ?>
-    <!-- Bắt đầu Nội dung Trang -->
+    <!-- Begin Page Content -->
     <div class="container-fluid">
-      <!-- Bảng Dữ Liệu -->
+      <!-- DataTales Example -->
       <!-- Log on to codeastro.com for more projects -->
       <div class="card shadow mb-4">
         <div class="card-header py-3">
-          <h1 class="h5 text-gray-800">Danh Sách Khách Hàng</h1>
+        <h1 class="h5 text-gray-800">Danh sách khách hàng</h1>
         </div>
         <div class="card-body">
           <div class="table-responsive">
             <table class="table table-bordered table-hover" id="dataTable" width="100%" cellspacing="0">
-              <thead class="thead-dark">
+            <thead class="thead-dark">
                 <tr>
                   <th>#</th>
-                  <th>Mã Khách Hàng</th>
-                  <th>Số CMND/CCCD</th>
-                  <th>Họ Tên</th>
-                  <th>Địa Chỉ</th>
+                  <th>Mã khách hàng</th>
+                  <th>Căn cước công dân</th>
+                  <th>Tên khách hàng</th>
+                  <th>Địa chỉ </th>
                   <th>Email</th>
-                  <th>Số Điện Thoại</th>
-                  <!-- <th>Hành Động</th> -->
+                  <th>Liên hệ</th>
+                  <!-- <th>Action</th> -->
                 </tr>
               </thead>
               <tbody>
-                <?php $i = 1; foreach ($pelanggan as $row) { ?>
+                <?php $i=1;foreach ($pelanggan as $row) { ?>
                   <tr>
                     <td><?= $i++; ?></td>
                     <td><?= $row['kd_pelanggan']; ?></td>
@@ -46,26 +46,30 @@
                     <td><?= $row['alamat_pelanggan']; ?></td>
                     <td><?= $row['email_pelanggan']; ?></td>
                     <td><?= $row['telpon_pelanggan']; ?></td>
-                    <!-- <td><a href="<?= base_url('backend/home/viewpelanggan/'.$row['kd_pelanggan']) ?>" class="btn btn-info">Xem</a></td> -->
+                    <!-- <td><a href="<?= base_url('backend/home/viewpelanggan/'.$row['kd_pelanggan']) ?>" class="btn btn btn-info">View</a></td> -->
                   </tr>
                 <?php } ?>
-              </tbody>
-            </table>
-          </div>
+            </tbody>
+          </table>
         </div>
       </div>
     </div>
-    <!-- Kết thúc Nội dung -->
+    <!-- /.container-fluid -->
   </div>
-  <!-- Kết thúc Nội dung Trang -->
+  <!-- /.container-fluid -->
 </div>
-<!-- Kết thúc Content Wrapper -->
+<!-- End of Main Content -->
 <!-- Footer -->
 <?php $this->load->view('backend/include/base_footer'); ?>
-<!-- Kết thúc Footer -->
-<!-- Cuộn Lên -->
+<!-- End of Footer -->
+</div>
+<!-- End of Content Wrapper -->
+</div>
+<!-- End of Page Wrapper -->
+<!-- Log on to codeastro.com for more projects -->
+<!-- Scroll to Top Button-->
 <a class="scroll-to-top rounded" href="#page-top">
-  <i class="fas fa-angle-up"></i>
+<i class="fas fa-angle-up"></i>
 </a>
 <!-- js -->
 <?php $this->load->view('backend/include/base_js'); ?>

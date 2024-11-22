@@ -41,7 +41,7 @@
                     <td><?= $row['nama_tiket']; ?></td>
                     <td><?= $row['kursi_tiket']; ?></td>
                     <td><?= strtoupper($row['asal_beli_tiket']);  ?></td>
-                    <td><a href="<?= base_url('backend/tiket/viewtiket/'.$row['kd_tiket']) ?>" class="btn btn-info">Xem</a></td>
+                    <td align="center"><a href="<?= base_url('backend/tiket/viewtiket/'.$row['kd_tiket']) ?>" class="btn btn-info">Xem</a></td>
                   </tr>
                 <?php } ?>
             </tbody>

@@ -15,12 +15,12 @@
     <?php $this->load->view('backend/include/base_nav'); ?>
     <!-- Nội dung chính -->
     <div class="container-fluid">
-      <h1 class="h5 text-gray-800">Quản Lý Điểm Đến/Điểm Trung Chuyển</h1>
+      <h1 class="h5 text-gray-800">Quản lý tuyến xe</h1>
       <!-- Bảng dữ liệu -->
       <div class="card shadow mb-4">
         <div class="card-header py-3">
           <button type="button" class="btn btn-success pull-right" data-toggle="modal" data-target="#ModalTujuan">
-          Thêm Điểm Đến
+          Thêm tuyến xe
           </button>
         </div>
         <div class="card-body">
@@ -30,9 +30,9 @@
                 <tr align="center">
                   <th>#</th>
                   <th>Mã</th>
-                  <th>Thành Phố Đích</th>
-                  <th>Thông Tin Trung Chuyển</th>
-                  <th>Thao Tác</th>
+                  <th>Nơi xuất phát</th>
+                  <th>Nơi đến</th>
+                  <th>Action</th>
                 </tr>
               </thead>
               <tbody>
