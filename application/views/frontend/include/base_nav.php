@@ -12,9 +12,11 @@
 			          <?php if ($this->session->userdata('username')) { ?>
 				      	<li class="menu-has-children"><a href="#">Hi, <?php echo $this->session->userdata('nama_lengkap'); ?></a>
 						<ul>
-							<li><a href="<?php echo base_url() ?>profile/profilesaya/<?php echo $this->session->userdata('kd_pelanggan') ?>"><i class="fas fa-id-card"></i> My Profile</a></li>
-							<li><a href="<?php echo base_url() ?>profile/tiketsaya/<?php echo $this->session->userdata('kd_pelanggan') ?>"><i class="fas fa-ticket-alt"></i> My Ticket</a></li>
-							<li><a href="<?php echo base_url() ?>login/logout"><i class="fas fa-sign-out-alt"></i> Dăng xuất</a></li>
+							<li><a href="<?php echo base_url() ?>profile/profilesaya/<?php echo $this->session->userdata('kd_pelanggan') ?>">
+								<i class="fas fa-id-card"></i> Hồ sơ của tôi</a></li>
+							<li><a href="<?php echo base_url() ?>profile/tiketsaya/<?php echo $this->session->userdata('kd_pelanggan') ?>">
+								<i class="fas fa-ticket-alt"></i> Vé của tôi</a></li>
+							<li><a href="<?php echo base_url() ?>login/logout"><i class="fas fa-sign-out-alt"></i> Đăng xuất</a></li>
 						</ul>
 						</li>
 				      <?php }else{ ?>  

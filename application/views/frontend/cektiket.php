@@ -15,7 +15,7 @@
 		<meta charset="UTF-8">
 		<!-- Log on to codeastro.com for more projects -->
 		<!-- Site Title -->
-		<title>Get Tickets</title>
+		<title>Nhận vé</title>
 		<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet">
 		<!--CSS-->
 		<link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>assets/frontend/datepicker/dcalendar.picker.css">
@@ -38,7 +38,7 @@
 					    <form action="<?php echo base_url() ?>tiket/cekorder" method="post">
 									<div class="form-group">
 										<label for="exampleInputEmail1">Nhập mã đặt chỗ của bạn</label>
-										<input type="text" id="" class="form-control" id="" name="kodetiket" placeholder="Ticket Code" required="">
+										<input type="text" id="" class="form-control" id="" name="kodetiket" placeholder="Mã vé " required="">
 									</div>
 									<button type="submit" class="btn btn-success pull-right">Tìm kiếm </button>
 								</form>

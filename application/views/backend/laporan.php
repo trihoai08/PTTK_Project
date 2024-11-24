@@ -83,15 +83,15 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h3 class="modal-title" id="myModalLabel">Choose Month</h3>
+                    <h3 class="modal-title" id="myModalLabel">Chọn tháng</h3>
                 </div>
                 <form class="form-horizontal" method="post" action="<?= base_url('backend/laporan/laporbulan') ?>" target="_blank">
                     <div class="modal-body">
                         <div class="form-group">
-                            <label class="control-label col-xs-3" >Month</label>
+                            <label class="control-label col-xs-3" >Tháng</label>
                             <div class="col-xs-9">
                                 <select name="bln" class="selectpicker show-tick form-control" data-live-search="true" title="Choose Month" data-width="80%" required/>
-                                    <option value='' selected disabled>Choose Month</option>
+                                    <option value='' selected disabled>Chọn tháng</option>
                                 <?php foreach ($bulan as $row) { ?>
                                     <option value="<?= $row['bulan'] ?>"><?= $row['bulan'] ?></option>
                                 <?php } ?>
@@ -101,8 +101,8 @@
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <button class="btn btn-danger" data-dismiss="modal" aria-hidden="true">Close</button>
-                        <button class="btn btn-success"><span class="fa fa-print"></span> Print</button>
+                        <button class="btn btn-danger" data-dismiss="modal" aria-hidden="true">Đóng</button>
+                        <button class="btn btn-success"><span class="fa fa-print"></span> In</button>
                     </div>
                 </form>
             </div>

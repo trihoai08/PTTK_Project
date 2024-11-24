@@ -32,14 +32,14 @@
 						<!-- Default Card Example -->
 						<div class="card ">
 							<div class="card-header">
-								<i class="fas fa-user"></i> Customer Registration
+								<i class="fas fa-user"></i> Khách hàng đăng kí
 							</div>
 							<div class="card-body">
 								<form action="<?php echo base_url() ?>login/daftar" method="post">
 									<div class="form-group">
 										<div class="form-group">
 											<div class="form-label-group">
-												<input type="text" name="name" class="form-control" required="" placeholder="Full Name" value="<?php echo set_value('name') ?>">
+												<input type="text" name="name" class="form-control" required="" placeholder="Họ và Tên" value="<?php echo set_value('name') ?>">
 												<?php echo form_error('name'),'<small class="text-danger pl-3">','</small>'; ?>
 											</div>
 										</div>
@@ -54,14 +54,14 @@
 											</div>
 											<div class="col-md-6">
 												<div class="form-label-group">
-													<input type="number" id="nomor" name="nomor" class="form-control" required="" placeholder="Contact Number" value="<?php echo set_value('nomor') ?>">
+													<input type="number" id="nomor" name="nomor" class="form-control" required="" placeholder="Số điện thoại liên lạc" value="<?php echo set_value('nomor') ?>">
 													<?php echo form_error('nomor'),'<small class="text-danger pl-3">','</small>'; ?>
 												</div>
 											</div>
 										</div>
 									</div>
 									<div class="form-group">
-										<label for="username">Address</label>
+										<label for="username">Địa chỉ</label>
 										<div class="form-label-group">
 											<textarea class="form-control" name="alamat"><?php echo set_value('alamat') ?></textarea>
 											<?php echo form_error('alamat'),'<p class="text-danger pl-3">','</p>'; ?>
@@ -78,15 +78,15 @@
 											<input type="password" class="form-control form-control-user" name="password1" placeholder="Password">
 										</div>
 										<div class="col-sm-6">
-											<input type="password" class="form-control form-control-user" name="password2" placeholder="Repeat Password">
+											<input type="password" class="form-control form-control-user" name="password2" placeholder="Nhập lại mật khẩu">
 										</div>
 									</div>
 									<?php echo form_error('password1'),'<small class="text-danger pl-3">','</small>'; ?>
-									<button class="btn btn-info btn-block">Register</button>
+									<button class="btn btn-info btn-block">Đăng kí</button>
 								</form>
 								<hr>
 								<div class="text-center">
-									<p>Already Registered? <a class="" href="<?php echo base_url() ?>login">Login Now</a></p>
+									<p>Bạn đã đăng ký? <a class="" href="<?php echo base_url() ?>login">Đăng nhập</a></p>
 								</div>
 							</div>
 						</div>
