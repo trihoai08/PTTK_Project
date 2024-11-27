@@ -39,18 +39,18 @@
 								</div>
 								<div class="card-body">
 									<div class="form-group">
-										<label for="CN">Tên Hành khách</label>
-										<input type="text" id="" class="form-control" id="" name="nama[]" placeholder="Seat Number <?php echo $row ?> On behalf of" required>
+										<label for="CN">Họ và tên hành khách</label>
+										<input type="text" id="" class="form-control" id="" name="nama[]" placeholder="Tên hành khách" required>
 										<input type="hidden" name="kursi[]" value="<?php echo $row ?>">
 									</div>
 									<div class="form-group">
 										<select name="tahun[]" class="form-control js-example-basic-single" required>
-											<option value="" selected disabled="">Tuổi hành khách </option>
+											<option value="" selected disabled=""> Chọn tuổi </option>
 											<?php
 											$thn_skr = 90;
 											for ($x = $thn_skr; $x >= 1; $x--) {
 											?>
-											<option value="<?php echo $x ?>"><?php echo $x ?> Năm </option>
+											<option value="<?php echo $x ?>"><?php echo $x ?> Tuổi </option>
 											<?php
 											}
 											?>
@@ -66,24 +66,24 @@
 							<!-- Default Card Example -->
 							<div class="card mb-5">
 								<div class="card-header">
-									<i class="fas fa-user"></i> Customer Identity
+									<i class="fas fa-user"></i> Thông tin hành khách
 								</div>
 								<div class="card-body">
 									<div class='form-group'>
 										<div class='col-sm-12'>
-											<input name='no_ktp' required="" maxlength='64' class='form-control required' placeholder='ID card number' type='text' title='ID number must be filled.' value="<?php echo $this->session->userdata('ktp') ?>"></div>
+											<input name='no_ktp' required="" maxlength='64' class='form-control required' placeholder='Căn cước công dân' type='text' title='Điền căn cước công dân.' value="<?php echo $this->session->userdata('ktp') ?>"></div>
 										</div>
 										<div class='form-group'>
 											<div class='col-sm-12'>
-												<input name='nama_pemesan' required="" maxlength='64' class='form-control required' placeholder='Customer Name' type='text' title='Customer name is required' value="<?php echo $this->session->userdata('nama_lengkap') ?>"></div>
+												<input name='nama_pemesan' required="" maxlength='64' class='form-control required' placeholder='Tên hành khách' type='text' title='Điền tên hành khách.' value="<?php echo $this->session->userdata('nama_lengkap') ?>"></div>
 											</div>
 											<div class='form-group'>
 												<div class='col-sm-12'>
-													<input name='hp' required="" maxlength='16' class='form-control required' placeholder='Handphone' type='text' title='Required Field' value="<?php echo $this->session->userdata('telpon') ?>"></div>
+													<input name='hp' required="" maxlength='16' class='form-control required' placeholder='Số điện thoại' type='text' title='Điền số điện thoại.' value="<?php echo $this->session->userdata('telpon') ?>"></div>
 												</div>
 												<div class='form-group'>
 													<div class='col-sm-12'>
-													<textarea name='alamat' cols='20' rows='3' id='alamat' required="" maxlength='256' class='form-control required' placeholder='Address' title='Address Required.' ><?php echo $this->session->userdata('alamat')?></textarea></div>
+													<textarea name='alamat' cols='20' rows='3' id='alamat' required="" maxlength='256' class='form-control required' placeholder='Địa chỉ' title='Điền địa chỉ.' ><?php echo $this->session->userdata('alamat')?></textarea></div>
 												</div>
 												<div class='form-group'>
 													<div class='col-sm-12'>
@@ -95,7 +95,7 @@
 										<div class="col">
 											<div class="card">
 												<div class="card-header">
-													<i class="fas fa-dollar-sign"></i>Phương thức thanh toán
+													<i class="fas fa-dollar-sign"></i> Phương thức thanh toán
 												</div>
 												<div class="card-body">
 													<form action="<?php echo base_url() ?>tiket/cektiketmu" method="post">
@@ -111,7 +111,7 @@
 														<hr>
 														<div class='form-group'>
 														<a href='javascript:history.back()' class='btn btn-default pull-left'>Quay lại</a>
-														<button class="btn btn-success pull-right">Quy trình vé</button>
+														<button class="btn btn-success pull-right">Thanh toán</button>
 													</div>
 												</form>
 												<!-- Log on to codeastro.com for more projects -->

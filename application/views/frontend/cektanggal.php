@@ -158,10 +158,10 @@
 								<b></b>Với phương thức này, bạn có thể chọn bất kỳ ngân hàng nào có sẵn [làm Phương thức thanh toán] để đặt vé.</li>
 							<li>Sau khi gửi biểu mẫu, việc đặt chỗ được thực hiện <b>[tạm thời]</b>. Hệ thống sẽ cung cấp cho bạn một <b>Mã QR</b> và bạn phải thực hiện thanh toán.</li>
 							<li>Tất cả các hướng dẫn thanh toán đều được cung cấp trên trang vé.</li>
-<li>Sau đó, nhấn vào nút <b>Xác nhận Thanh toán</b> để gửi chi tiết thanh toán của bạn kèm theo hình ảnh <b>bằng chứng thanh toán</b>.</li>
-<li>Cuối cùng, yêu cầu thanh toán của bạn sẽ được gửi để <b>xác minh</b>.</li>
-<li>Bạn cũng sẽ nhận được một <b>Vé điện tử (E-Ticket)</b> sau khi thanh toán được xác nhận.</li>
-<li>Nếu bạn đã thực hiện thanh toán, hãy mang theo bằng chứng thanh toán vào thời điểm khởi hành và đổi vé trước giờ khởi hành một giờ.</li>
+							<li>Sau đó, nhấn vào nút <b>Xác nhận Thanh toán</b> để gửi chi tiết thanh toán của bạn kèm theo hình ảnh <b>bằng chứng thanh toán</b>.</li>
+							<li>Cuối cùng, yêu cầu thanh toán của bạn sẽ được gửi để <b>xác minh</b>.</li>
+							<li>Bạn cũng sẽ nhận được một <b>Vé điện tử (E-Ticket)</b> sau khi thanh toán được xác nhận.</li>
+							<li>Nếu bạn đã thực hiện thanh toán, hãy mang theo bằng chứng thanh toán vào thời điểm khởi hành và đổi vé trước giờ khởi hành một giờ.</li>
 						</span></ol>
 					<w:worddocument></w:worddocument>
 				</div>

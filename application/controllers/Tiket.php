@@ -183,10 +183,14 @@ class Tiket extends CI_Controller {
                'mailtype'  => 'html',
                'charset'   => 'utf-8',
                'protocol'  => 'smtp',
-               'smtp_host' => 'ssl://smtp.gmail.com',
-               'smtp_user' => 'demo@email.com',    // Ganti dengan email gmail kamu
+               'smtp_host' => 'smtp.gmail.com',
+               'smtp_user' => 'jsl12404@inohm.com',    // Ganti dengan email gmail kamu
                'smtp_pass' => 'P@$$\/\/0RD',      // Password gmail kamu
-               'smtp_port' => 465,
+               'smtp_port' => 587,
+			   'smtp_crypto' => 'tls', // Thêm mã hóa TLS
+			   'mailpath' => '/usr/sbin/sendmail', // Đảm bảo đường dẫn đúng
+			   'wordwrap' => TRUE, // Bật wordwrap để dễ dàng gửi email
+			   'smtp_timeout' => 30, // Thêm timeout để xử lý lỗi kết nối,
 		   ];
         $this->load->library('email', $config);
         $this->email->set_newline("\r\n");

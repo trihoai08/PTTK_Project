@@ -49,12 +49,12 @@
           <li class="nav-item">
             <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
               <i class="fas fa-fw fa-users"></i>
-              <span>User Management</span>
+              <span>Quản lý người dùng</span>
             </a>
             <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
               <div class="bg-white py-2 collapse-inner rounded">
-                <a class="collapse-item" href="<?= base_url('backend/pelanggan') ?>">Customer List</a>
-                <a class="collapse-item" href="<?= base_url() ?>backend/admin">Administrator</a>
+                <a class="collapse-item" href="<?= base_url('backend/pelanggan') ?>">Danh sách khách hàng</a>
+                <a class="collapse-item" href="<?= base_url() ?>backend/admin">Quản trị viên</a>
               </div>
             </div>
           </li>

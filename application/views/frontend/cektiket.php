@@ -32,7 +32,7 @@
 						<!-- Default Card Example -->
 						<div class="card wobble">
 					  <div class="card-header">
-					   <i class="fas fa-ticket"></i> Kiểm tra vé của tôi
+					   <i class="fas fa-ticket"></i> Kiểm tra vé
 					  </div>
 					  <div class="card-body">
 					    <form action="<?php echo base_url() ?>tiket/cekorder" method="post">

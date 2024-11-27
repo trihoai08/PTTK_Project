@@ -41,11 +41,10 @@
 				</button>
 			</div>
 			<div class="modal-body">
-				[ ] with ❤ in Jakarta/Cengkareng <br>
-				By Bahyu Sanciko
+				From Chờ ill with love ❤
 			</div>
 			<div class="modal-footer">
-				<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+				<button type="button" class="btn btn-danger" data-dismiss="modal">Đóng</button>
 			</div>
 		</div>
 	</div>

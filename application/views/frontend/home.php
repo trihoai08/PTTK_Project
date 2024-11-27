@@ -57,18 +57,16 @@
 				<div class="row fullscreen d-flex align-items-center justify-content-end">
 					<div class="banner-content col-lg-7 col-md-12">
 						<!-- <h4  class="combined">Official Ticket Guarantee</h4> -->
-							<h2 class="text-white" >
-						Hệ thống đặt vé xe khách	
+							<h2 class="text-white">
+								Hệ thống đặt vé xe khách	
 							</h2>
 						<p class="text-white font-size: 15px" >
-						Bây giờ việc tìm vé xe khách dễ dàng hơn, bạn có thể đặt vé trực tuyến tại BTBS. 
-						Không cần phải bận tâm đến nhà ga hoặc văn phòng đại lý, giờ đây bạn có thể mua vé dễ dàng.
-						 Đặt vé nhanh chóng và dễ dàng. Tự do lựa chọn chỗ ngồi. Rẻ nhất mỗi ngày. Dịch vụ khách hàng 24/7.
-						 <p style="color: red; font-size: 20px; font-weight: bold;">
-							Luôn đặt sự an toàn-uy tín-chất lượng lên hàng đầu.</p>
-
-
-										</p>
+							Bây giờ việc tìm vé xe khách dễ dàng hơn, bạn có thể đặt vé trực tuyến tại BTBS. 
+							Không cần phải bận tâm đến nhà ga hoặc văn phòng đại lý, giờ đây bạn có thể mua vé dễ dàng.
+							Đặt vé nhanh chóng và dễ dàng. Tự do lựa chọn chỗ ngồi. Rẻ nhất mỗi ngày. Dịch vụ khách hàng 24/7.
+						<p style="color: white; font-size: 20px; font-weight: bold;">
+							Luôn đặt sự an toàn - uy tín - chất lượng lên hàng đầu.</p>
+						</p>
 						<a href="<?php echo base_url() ?>tiket" class="btn btn-danger text-uppercase">Tìm kiếm vé</a>
 					</div>
 				</div>

@@ -30,7 +30,7 @@
 				<div class="row height align-items-center justify-content-center">
 					<div class="col-lg-5">
 						<div class="card card-login mx-auto mt-10">
-							<div class="card-header">khách hàng Đăng nhập </div>
+							<div class="card-header"> Đăng nhập </div>
 							<div class="card-body" align="left">
 								<?php echo $this->session->flashdata('pesan'); ?>
 								<form action="<?php echo base_url() ?>login/cekuser" method="post">

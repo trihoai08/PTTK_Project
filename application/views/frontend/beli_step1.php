@@ -33,16 +33,16 @@
 						<!-- Default Card Example -->
 						<div class="card mb-5">
 							<div class="card-header">
-								<i class="fas fa-info-circle"></i> Mô tả vé
+								<i class="fas fa-info-circle"></i> Chi tiết vé
 							</div>
 							<div class="card-body">
 								<ul>
-									<li>►Điểm đến <b><?php echo $asal['kota_tujuan']." - ".$jadwal['kota_tujuan']." [".$jadwal['kd_jadwal']."]"; ?></b></li>
-									<li>► Tên xe buýt  <b><?php echo $jadwal['nama_bus'];  ?></b></li>
-									<li>► Số xe  <b><?php echo $jadwal['plat_bus'];  ?></b></li>
-									<li>► Ngày khởi hành<b><?php echo strtoupper($asal['kota_tujuan'])." - ".$asal['terminal_tujuan']; ?></b></li>
-									<li>► Đến<b><?php echo strtoupper($jadwal['kota_tujuan'])." - ".$jadwal['terminal_tujuan']; ?></b></li>
-									<li>►Giá vé: <b>$<?php echo number_format((float)($jadwal['harga_jadwal']),0,",",".") ; ?></b></li>
+									<li>► Lịch trình <b><?php echo $asal['kota_tujuan']." - ".$jadwal['kota_tujuan']." [".$jadwal['kd_jadwal']."]"; ?></b></li>
+									<li>► Tên xe  <b><?php echo $jadwal['nama_bus'];  ?></b></li>
+									<li>► Mã số xe  <b><?php echo $jadwal['plat_bus'];  ?></b></li>
+									<li>► Tuyến xe <b><?php echo strtoupper($asal['kota_tujuan'])." - ".$asal['terminal_tujuan']; ?></b></li>
+									<li>► Điểm đến <b><?php echo strtoupper($jadwal['kota_tujuan'])." - ".$jadwal['terminal_tujuan']; ?></b></li>
+									<li>► Giá vé: <b>$<?php echo number_format((float)($jadwal['harga_jadwal']),0,",",".") ; ?></b></li>
 									<li>► Ngày khởi hành <b><?php echo nama_hari($tanggal).",".tgl_indo($tanggal) ?></b></li>
 									<li>► Thời gian Khởi hành.  <b>at <?php echo $jadwal['jam_berangkat_jadwal']; ?></b></li>
 									<li>► Thời gian đến <b>lúc <?php echo $jadwal['jam_tiba_jadwal']; ?> </b></li>
@@ -58,7 +58,7 @@
 							<!-- Default Card Example -->
 							<div class="card mb-5" >
 								<div class="card-header">
-									<i class="fas fa-bus"></i> Lựa chọn chỗ ngồi
+									<i class="fas fa-bus"></i> Chọn vị trí ghế
 								</div>
 								<center class="">
 								<table class="">
@@ -76,7 +76,7 @@
 										<td class='btn-group' width='139'>
 											<!--=================================================START 3C=========================================================-->
 											<label class='btn btn-primary'>
-												<a value='' autocomplete='off' disabled='disabled'>Driver's Seat</a>
+												<a value='' autocomplete='off' disabled='disabled'>Bác tài</a>
 											</label>
 										</td>
 									</tr>
@@ -209,8 +209,7 @@
 														<p>Sau khi chọn chỗ ngồi, vui lòng nhấp vào nút 'Tiếp theo' để tiếp tục.</p>
 														<div class='btn-group'>
 															<a href="<?php echo base_url('tiket/cekjadwal/'.$tanggal.'/'.$asal['kd_tujuan'].'/'.$jadwal['kota_tujuan']) ?>" class='btn btn-default'>Quay lại</a>
-															<input class="btn btn-info pull-right" disabled="disabled" type="submit" value="Next">
-															
+															<input class="btn btn-info pull-right" disabled="disabled" type="submit" value="Tiếp theo">
 														</div>
 													</div>
 													<form>
