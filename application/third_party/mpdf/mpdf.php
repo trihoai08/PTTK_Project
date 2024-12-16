@@ -30880,13 +30880,14 @@ function setHiEntitySubstitutions() {
 }
 
 function SubstituteHiEntities($html) {
-	// converts html_entities > ASCII 127 to unicode
-	// Leaves in particular &lt; to distinguish from tag marker
-	if (count($this->entsearch)) {
-		$html = str_replace($this->entsearch,$this->entsubstitute,$html);
-	}
-	return $html;
+    // converts html_entities > ASCII 127 to unicode
+    // Leaves in particular &lt; to distinguish from tag marker
+    if (is_array($this->entsearch) && count($this->entsearch)) {
+        $html = str_replace($this->entsearch, $this->entsubstitute, $html);
+    }
+    return $html;
 }
+
 
 
 // Edited v1.2 Pass by reference; option to continue if invalid UTF-8 chars

@@ -41,7 +41,7 @@
 											<th scope="col">Tuyến đường [Mã lịch trình]</th>
 											<th>Điểm đến</th>
 											<th scope="col">Ngày & Giờ</th>
-											<th scope="col">Vị trí ghế</th>
+											<th scope="col">Số lượng ghế</th>
 											<th>Giá</th>
 											<th scope="col">Action</th>
 										</tr>
