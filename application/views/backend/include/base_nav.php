@@ -9,7 +9,7 @@
         <div class="sidebar-brand-icon rotate-n-15">
           <i class="fas fa-bus"></i>
         </div>
-        <div class="sidebar-brand-text mx-3">BTBS CI</div>
+        <div class="sidebar-brand-text mx-3">THT'S Admin</div>
       </a>
 
       <!-- Divider -->
@@ -19,10 +19,10 @@
       <li class="nav-item">
         <a class="nav-link" href="<?= base_url() ?>backend/home">
           <i class="fas fa-fw fa-tachometer-alt"></i>
-          <span>Dashboard </span></a>
+          <span>Bảng điều khiển</span></a>
           <a class="nav-link" href="<?= base_url() ?>backend/bus">
             <i class="fas fa fa-bus"></i>
-            <span>Manage Bus</span></a>
+            <span>Quản lý xe</span></a>
             <a class="nav-link" href="<?= base_url() ?>backend/rute">
               <i class="fas fa fa-compass"></i>
               <span>Manage Terminal</span></a>

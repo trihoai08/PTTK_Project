@@ -87,8 +87,8 @@
 							<table class="table table-bordered table-condensed" style="font-size:12px;" id="mydata">
 								<thead>
 									<tr>
-										<th style="text-align:center;">Thành phố</th>
-										<th>Terminal</th>
+										<th style="text-align:center;">Điểm xuất phát</th>
+										<th>Điểm đến</th>
 									</tr>
 								</thead>
 								<tbody>

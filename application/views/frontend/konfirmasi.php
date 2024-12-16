@@ -43,11 +43,11 @@
 									<div class="form-group">
 										<label for="exampleInputEmail1">NGÂN HÀNG CỦA BẠN</label>
 										<select class="form-control" name="bank_km">
-											<option value="" selected disabled="">Chọn ngân hàngk</option>
+											<option value="" selected disabled="">Chọn ngân hàng</option>
 											<option value="New Leaf Bank" >Mb bank</option>
-											<option value="Zenith Bank">VietCom Bank</option>
+											<option value="Zenith Bank">Bidv Bank</option>
 											<option value="WestView Bank">TechCom Bank</option>
-											<option value="Aurora">Aurora</option>
+											<option value="Aurora">SHB Bank</option>
 											<option value="RoyalCrown Bank">RoyalCrown Bank</option>
 										</select>
 										<!-- Log on to codeastro.com for more projects -->
@@ -60,15 +60,15 @@
 									</div>
 									<div class="form-group">
 										<label for="exampleInputEmail1">Số tài khoản</label>
-										<input type="number" class="form-control" name="nomrek" value="" placeholder="Account number">
+										<input type="number" class="form-control" name="nomrek" value="" placeholder="Số tài khoản">
 									</div>
 									<div class="form-group">
 										<label for="exampleInputEmail1">Tên người gửi</label>
-										<input type="text" class="form-control" name="nama" value="" placeholder="Name of the sender">
+										<input type="text" class="form-control" name="nama" value="" placeholder="Tên người gửi">
 									</div>
 									<div class="form-group">
 										<label for="exampleInputEmail1">Số tiền thanh toán</label>
-										<input type="number" class="form-control" name="total" value="<?= $total ?>" placeholder="Total price" readonly>
+										<input type="number" class="form-control" name="total" value="<?= $total ?>" placeholder="Tổng giá tiền" readonly>
 									</div>
 									<div class="form-group">
 										<label for="exampleInputEmail1">Tải lên hình ảnh giao dịch</label>
