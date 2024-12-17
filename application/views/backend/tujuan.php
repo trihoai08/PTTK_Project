@@ -30,8 +30,8 @@
                 <tr align="center">
                   <th>#</th>
                   <th>Mã</th>
+                  <th>Thành phố</th>
                   <th>Nơi xuất phát</th>
-                  <th>Nơi đến</th>
                   <th>Action</th>
                 </tr>
               </thead>

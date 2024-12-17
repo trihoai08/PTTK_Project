@@ -42,7 +42,7 @@
 												<th scope="col">Vé</th>
 												<th scope="col">Lịch trình số [Mã xe]</th>
 												<th scope="col"> Khởi hành</th>
-												<th scope="col">Số ghế.</th>
+												<th scope="col">Vị trí ghế</th>
 												<th scope="col">Giá vé</th>
 											</tr>
 										</thead>
@@ -78,7 +78,7 @@
 								<p>(Trước <?php $expired = hari_indo(date('N',strtotime($tiket[0]['expired_order']))).', '.tanggal_indo(date('Y-m-d',strtotime(''.$tiket[0]['expired_order'].''))).', '.date('H:i',strtotime($tiket[0]['expired_order'])); echo $expired;?>)</p>
 								<hr>
 								<div class="medium-title col-12 mb-20">
-									<h4><p>Please transfer payment to the following account number</p></h4>
+									<h4><p>Vui lòng chuyển khoản vào số tài khoản sau</p></h4>
 								</div>
 								<div class="offset-lg-1 col-lg-10 offset-sm-0 col-sm-12">
 									<div class="row">
@@ -94,7 +94,7 @@
 									</div>
 								</div>
 								<div class="col-12 medium-title regular-text mt-20">
-									<h4><b> <p>Tổng số tiền của</p></b></h4>
+									<h4><b> <p>Tổng số tiền của bạn</p></b></h4>
 								</div>
 								<div class="col-12 bigger-title text-orange">
 									<h3 ><p>$<?= number_format($total,0,',','.') ;?></p></h3>
@@ -105,16 +105,14 @@
 										<h3 class="mb-20">HƯỚNG DẪN THANH TOÁN</h3>
 										<div class="">
 											<ol class="ordered-list" align="left">
-												<li>Điền thẻ <?= $tiket[0]['nama_bank']; ?> ATM của bạn</li>
-												<li>Nhập mã PIN ATM của bạn</li>
-												<li>Chọn Menu Giao dịch Khác</li>
-												<li>Chọn menu Chuyển và Đến tài khoản <?= $tiket[0]['nama_bank']; ?></li>
-												<li>Nhập số tài khoản <?= $tiket[0]['nama_bank']; ?> which is aimed</li>
-												<li>Nhập số tiền cần chuyển</li>
-												<li>Màn hình ATM sẽ hiển thị dữ liệu giao dịch của bạn,</li>
-												<li>Nếu dữ liệu đúng hãy chọn "YES" (OK)</li>
-												<li>Hoàn tất (sẽ nhận được biên lai từ máy ATM)</li>
-												<li>Lấy thẻ ATM của bạn</li>
+												<li>Chọn ngân hàng của bạn</li>
+												<li>Nhập số tài khoản <?= $tiket[0]['nama_bank']; ?> của bạn</li>
+												<li>Nhập tên người gửi</li>
+												<li>Nhập số tiền cần chuyển ứng với số tiền thanh toán</li>
+												<li>Thực hiện chuyển tiền</li>
+												<li>Lưu lại biên lai giao dịch</li>
+												<li>Tải lên hình ảnh biên lai giao dịch</li>
+												<li>Hoàn tất</li>
 											</ol>
 										</div>
 									</div>

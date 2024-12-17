@@ -52,7 +52,7 @@
 										name="tanggal" required="">
 								</div>
 								<div class="form-group">
-									<label for="exampleInputEmail1">Điểm đi</label>
+									<label for="exampleInputEmail1">Điểm đi - Nơi xuất phát</label>
 									<select name="asal" class="form-control js-example-basic-single" required>
 										<option value="" selected disabled="">Chọn điểm đi</option>
 										<?php foreach ($asal as $row ) { ?>
@@ -87,8 +87,8 @@
 							<table class="table table-bordered table-condensed" style="font-size:12px;" id="mydata">
 								<thead>
 									<tr>
-										<th style="text-align:center;">Điểm xuất phát</th>
-										<th>Điểm đến</th>
+										<th style="text-align:center;">Thành phố</th>
+										<th>Nơi xuất phát</th>
 									</tr>
 								</thead>
 								<tbody>

@@ -28,23 +28,23 @@
               <span>Manage Terminal</span></a>
               <a class="nav-link" href="<?= base_url() ?>backend/jadwal">
                 <i class="fas fa fa-clipboard-list"></i>
-                <span>Manage Schedule</span></a>
+                <span>Quản lý chuyến xe</span></span></a>
         <a class="nav-link" href="<?= base_url() ?>backend/order">
           <i class="fas fa-bookmark"></i>
-          <span>List Bookings</span></a>
+          <span>Danh sách vé Chờ</span></a>
         <a class="nav-link" href="<?= base_url() ?>backend/tiket">
           <i class="fas fa-ticket-alt"></i>
           <span>Tickets</span></a>
         <a class="nav-link" href="<?= base_url() ?>backend/konfirmasi">
           <i class="fa fa-dollar-sign"></i>
-          <span>Payments List</span></a>
+          <span>Danh sách đã thanh toán</span></a>
         <?php if ($this->session->userdata('level') == '1') { ?>
            <a class="nav-link" href="<?= base_url() ?>backend/bank">
           <i class="fas fa fa-piggy-bank"></i>
-          <span>Bank List</span></a>
+          <span>Danh sách ngân hàng</span></a>
         <a class="nav-link" href="<?= base_url() ?>backend/laporan">
           <i class="fa fa fa-file"></i>
-          <span>Report</span></a>
+          <span>Báo cáo thống kê</span></a>
              <!-- Nav Item - Pages Collapse Menu -->
           <li class="nav-item">
             <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
